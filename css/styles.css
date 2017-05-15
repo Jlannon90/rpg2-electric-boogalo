@@ -14,7 +14,7 @@ body {
 #mapContainer {
   background-image: url("../images/map.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: contain;
   height: 1000px;
 }
 
