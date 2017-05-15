@@ -1,9 +1,50 @@
+* {
+  font-family: 'Eagle Lake', cursive;
+}
+
 h2 {
   font-weight: bold;
 }
 
 body {
   background-color: #d5a560;
+}
+#bardTale {
+  display: none;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 25px;
+}
+#bardImage {
+  margin-right: 5px;
+  padding-left: 50px;
+  display: none;
+}
+
+#raiseCol {
+  height: 200px;
+  padding-top: 90px;
+  display: none;
+}
+
+#bardImage img{
+  height: 200px;
+  width: auto;
+  border-radius: 100px;
+  margin-top: 20px;
+}
+#backStoryColumn {
+  height: 900px;
+  background-image: url("../images/scrolls.png");
+  border: 2px solid red;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 120px;
+}
+
+#startButton {
+
 }
 
 #startContainer {
@@ -18,7 +59,7 @@ body {
   padding-top: 15px;
   padding-left: 20px;
 }
-#characterContainer, #startContainer {
+#characterContainer, #mapContainer {
   display: none;
 }
 #mapContainer {
@@ -31,6 +72,7 @@ body {
 #mapRow1 {
 
 }
+
 #mapRow2 {
 
 }
@@ -105,4 +147,50 @@ body {
 }
 #ufo {
   width: 200px;
+
+@media screen and (max-width:  441px)  {
+  * {
+    text-align: center;
+  }
+
+  h1 {
+    float: right;
+    font-size: 20px;
+    padding-right: 20px;
+  }
+
+  #bardTale {
+    display: none;
+    padding: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    font-size: 10px;
+  }
+  #bardImage {
+    margin-right: 0px;
+    padding-left: 0px;
+  }
+
+  #raiseCol {
+    height: 0px;
+    padding-top: 0px;
+  }
+
+  #bardImage img{
+    height: 80px;
+    width: auto;
+    border-radius: 100px;
+    margin-top: 0px;
+    float: left;
+  }
+
+  #backStoryColumn {
+    height: 350px;
+    background-image: url("../images/scrolls.png");
+    border: 2px solid red;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 60px;
+  }
+
 }
