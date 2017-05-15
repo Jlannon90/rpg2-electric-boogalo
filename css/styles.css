@@ -1,12 +1,21 @@
 h2 {
   font-weight: bold;
 }
+body {
+  background-color: #d5a560;
+}
 
 #startContainer {
-  background-color: #d5a560;
   width: 100%;
   height: 100%;
 
+}
+
+#mapContainer {
+  background-image: url("../images/map.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 1000px;
 }
 
 #bardColumn {
