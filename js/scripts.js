@@ -5,8 +5,10 @@
 
 //------------------User Interface Logic------------------//
 $(function(){
+    $("#bardTale").show(7000);
+    $("#startButton").fadeIn(10000);
 
-  $("#backStoryColumn").click(function(event){
+  $("#startButton").click(function(event){
     event.preventDefault();
     $("#startContainer").hide();
     $("#characterContainer").show();
