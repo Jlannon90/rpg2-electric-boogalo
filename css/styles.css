@@ -1,40 +1,23 @@
-/*------------------Background Styles------------------*/
-/**/
-body {
+h2 {
+  font-weight: bold;
+}
+
+#startContainer {
+  background-color: #d5a560;
+  width: 100%;
+  height: 100%;
 
 }
 
-/**/
-/*------------------Font Styles------------------*/
-/**/
-
-
-/**/
-/*------------------Tag Styles------------------*/
-/**/
-h1 {
-
+#bardColumn {
+  background-image: url("../images/bard.jpg");
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 15px;
+  padding-left: 20px;
 }
 
-
-/**/
-/*------------------Title Styles------------------*/
-/**/
-
-
-
-/**/
-/*------------------Body Styles------------------*/
-/**/
-
-
-
-/**/
-/*------------------Form Styles------------------*/
-/**/
-
-
-
-/**/
-/*------------------Button Styles------------------*/
-/**/
+#characterContainer, #mapContainer {
+  display: none;
+}
