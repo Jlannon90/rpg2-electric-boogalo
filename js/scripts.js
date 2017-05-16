@@ -95,63 +95,151 @@ $(function(){
     var characterChoice = $("input:radio:checked").val();
 
     var userPlayer = new Player(characterChoice);
-
+    alert(userPlayer.name);
   });
 
 
-  $("#village").click(function() {
+  $("#village").click(function(event) {
     event.preventDefault();
     $("#mapContainer").hide();
+    $("#locationContainer").show();
     $("#villageContainer").show();
+    $("#back").show();
+    $(".playerAppear").show();
+    if(userPlayer.name === "Tinks") {
+      $("").show();
+    }
+    if(userPlayer.name === "Tex") {
+      $("").show();
+    }
+    if(userPlayer.name === "Quill") {
+      $("").show();
+    }
+    if(userPlayer.name === "Stunner") {
+      $("").show();
+    }
 
   });
   $("#houseOverWater").click(function() {
       $("#mapContainer").hide();
-
-      // if(userPlayer.name === "Tinks") {
-      //   $("").show();
-      // }
+      $("#back").show();
+      if(userPlayer.name === "Tinks") {
+        $("").show();
+      }
+      if(userPlayer.name === "Tex") {
+        $("").show();
+      }
+      if(userPlayer.name === "Quill") {
+        $("").show();
+      }
+      if(userPlayer.name === "Stunner") {
+        $("").show();
+      }
 
   });
-  $("#ghostHouse").click(function() {
+  $("#ghostHouse").click(function(event) {
     event.preventDefault();
     $("#mapContainer").hide();
+    $("#locationContainer").show();
     $("#hauntedContainer").show();
-
-      // if(userPlayer.name === "Tinks") {
-      //   $("").show();
-      // }
+    $("#back").show();
+    $(".playerAppear").show();
+    if(userPlayer.name === "Tinks") {
+      $("").show();
+    }
+    if(userPlayer.name === "Tex") {
+      $("").show();
+    }
+    if(userPlayer.name === "Quill") {
+      $("").show();
+    }
+    if(userPlayer.name === "Stunner") {
+      $("").show();
+    }
   });
-  $("#boat").click(function() {
+  $("#boat").click(function(event) {
       $("#mapContainer").hide();
-
-      // if(userPlayer.name === "Tinks") {
-      //   $("").show();
-      // }
+      $("#back").show();
+      if(userPlayer.name === "Tinks") {
+        $("").show();
+      }
+      if(userPlayer.name === "Tex") {
+        $("").show();
+      }
+      if(userPlayer.name === "Quill") {
+        $("").show();
+      }
+      if(userPlayer.name === "Stunner") {
+        $("").show();
+      }
 
   });
-  $("#tower").click(function() {
+  $("#tower").click(function(event) {
     event.preventDefault();
+    $("#towerButton").hide();
     $("#mapContainer").hide();
+    $("#locationContainer").show();
     $("#towerContainer").show();
+    $("#back").show();
+    $(".playerAppear").show();
+    if(userPlayer.name === "Tinks") {
+      $("").show();
+    }
+    if(userPlayer.name === "Tex") {
+      $("").show();
+    }
+    if(userPlayer.name === "Quill") {
+      $("").show();
+    }
+    if(userPlayer.name === "Stunner") {
+      $("").show();
+    }
   });
 
-  $("#ufo").click(function() {
+  $("#ufo").click(function(event) {
     event.preventDefault();
     $("#mapContainer").hide();
+    $("#locationContainer").show();
     $("#trailerContainer").show();
-    // if(userPlayer.name === "Tinks") {
-    //   $("").show();
-    // }
+    $("#back").show();
+    $(".playerAppear").show();
+    if(userPlayer.name === "Tinks") {
+      $("").show();
+    }
+    if(userPlayer.name === "Tex") {
+      $("").show();
+    }
+    if(userPlayer.name === "Quill") {
+      $("").show();
+    }
+    if(userPlayer.name === "Stunner") {
+      $("").show();
+    }
   });
 
   $("#oceanCastle").click(function() {
     event.preventDefault();
     $("#mapContainer").hide();
     $("#castleContainer").show();
-    // if(userPlayer.name === "Tinks") {
-    //   $("").show();
-    // }
+    if(userPlayer.name === "Tinks") {
+      $("").show();
+    }
+    if(userPlayer.name === "Tex") {
+      $("").show();
+    }
+    if(userPlayer.name === "Quill") {
+      $("").show();
+    }
+    if(userPlayer.name === "Stunner") {
+      $("").show();
+    }
   });
+
+  $("#back").click(function(event) {
+    event.preventDefault();
+    $(".locationHide").hide();
+    $("#locationContainer").hide();
+    $("#mapContainer").show();
+  })
 });
 // alert("fire10");
