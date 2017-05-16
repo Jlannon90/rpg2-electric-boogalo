@@ -49,7 +49,6 @@ body {
 
 #startContainer {
   height: 800px;
-  /*background: url("../images/scrolls.png");*/
   border: 2px solid red;
   background-size: contain;
   background-repeat: no-repeat;
@@ -151,50 +150,3 @@ body {
 #ufo {
   width: 200px;
 }
-
-/*@media screen and (max-width: 441px) {
-  * {
-    text-align: center;
-  }
-
-  h1 {
-    float: right;
-    font-size: 20px;
-    padding-right: 20px;
-  }
-
-  #bardTale {
-    display: none;
-    padding: 0px;
-    margin-top: 0px;
-    margin-left: 0px;
-    font-size: 10px;
-  }
-  #bardImage {
-    margin-right: 0px;
-    padding-left: 0px;
-  }
-
-  #raiseCol {
-    height: 0px;
-    padding-top: 0px;
-  }
-
-  #bardImage img{
-    height: 80px;
-    width: auto;
-    border-radius: 100px;
-    margin-top: 0px;
-    float: left;
-  }
-
-  #backStoryColumn {
-    height: 350px;
-    background-image: url("../images/scrolls.png");
-    border: 2px solid red;
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 60px;
-  }
-
-}*/

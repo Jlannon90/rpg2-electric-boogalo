@@ -1,73 +1,81 @@
 //------------------Business Logic------------------//
+//healing option to add health to a weak character
+var formaldehyde = {
+  healthUp: 100,
+};
 //Player Constructor
 function Player(name) {
   this.name = name;
-  this.life = 1;
-  this.physical = .10;
-  this.magic = .20;
-  this.item = [];
+  this.life = 100;
+  this.physical = 5;
+  this.magic = 8;
+  this.item = [formaldehyde];
 }
 //Attack Prototype
-Player.prototype.attacks = function(life, physical) {
+Player.prototype.attack = function(life, attack) {
 
-  //dice roll simulation
-  //when the method is called the paremeters take in the villians life and player's attack
   this.life -= this.life - this.power;
 }
-
 Player.prototype.cast = function(life, magic) {
-  //dice roll simulation
-  //when the method is called the paremeters take in the villians life and player's attack
+
   this.life -= this.life - this.magic;
 }
+  //heal prototype that heals character
+Player.prototype.heal = function(life, item) {
+
+  this.life = this.life + formaldehyde.healthUp;
+
+  if (this.life > 100) {
+    return this.life = 100;
+  }
+
+}
+
+Player.prototype.roll = function(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + 1);
+}
+
 var villianOne = {
-  name: name,
-  life: 1,
-  physical: .10,
-  magic: .15,
-  item: [],
+  name: "Trifler",
+  life: 100,
+  physical: 2,
+  magic: 5,
+  item: [formaldehyde],
   attack: function(life, power) {
     //dice roll simulation
     //when the method is called the paremeters take in the villians life and player's attack
     this.life -= this.life - this.physical;
   }
 };
-alert("fire4");
+// alert("fire4");
 var villianTwo = {
-  name: name,
-  life: 1,
-  physical: .15,
-  magic: .20,
-  item: [],
+  name: "Trife",
+  life: 100,
+  physical: 4,
+  magic: 8,
+  item: [formaldehyde],
   attack: function(life, power) {
     //dice roll simulation
     //when the method is called the paremeters take in the villians life and player's attack
     this.life -= this.life - this.physical;
   }
 };
-alert("fire5");
+// alert("fire5");
 var Boss = {
-  name: name,
-  life: 1,
-  physical: .20,
-  magic: .35,
-  item: [],
+  name: "Steve-O",
+  life: 100,
+  physical: 8,
+  magic: 10,
   attack: function(life, power) {
     //dice roll simulation
     //when the method is called the paremeters take in the villians life and player's attack
     this.life -= this.life - this.physical;
   }
 };
-alert("fire6");
-//i need a picture
-var formaldehyde = {
-  healthUp: 10,
-};
-alert("fire7");
-var stitches = {
-  healthUp: 20,
-};
-alert("fire8");
+
+
  //------------------User Interface Logic------------------//
 $(function(){
     $("#bardImage").fadeIn(6000);
@@ -84,29 +92,68 @@ $(function(){
     event.preventDefault();
     $("#characterContainer").hide();
     $("#mapContainer").show();
+
+    var characterChoice = $("input:radio:checked").val();
+
+    var userPlayer = new Player(characterChoice);
+
   });
 
   $("#oceanCastle").click(function() {
-      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
+      $("#mapContainer").hide();
+
+        if(userPlayer.name === "Tinks") {
+
+$("").show();        }
+
   });
   $("#village").click(function() {
-      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
+      $("#mapContainer").hide();
+
+      if(userPlayer.name === "Tinks") {
+        $("").show();
+      }
+
   });
   $("#houseOverWater").click(function() {
-      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
+      $("#mapContainer").hide();
+
+      if(userPlayer.name === "Tinks") {
+        $("").show();
+      }
+
   });
   $("#ghostHouse").click(function() {
-      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
+      $("#mapContainer").hide();
+
+      if(userPlayer.name === "Tinks") {
+        $("").show();
+      }
+
   });
   $("#boat").click(function() {
-      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
+      $("#mapContainer").hide();
+
+      if(userPlayer.name === "Tinks") {
+        $("").show();
+      }
+
   });
   $("#tower").click(function() {
-      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
+      $("#mapContainer").hide();
+
+      if(userPlayer.name === "Tinks") {
+        $("").show();
+      }
+
   });
   $("#ufo").click(function() {
-      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
-  });
+      $("#mapContainer").hide();
 
+      if(userPlayer.name === "Tinks") {
+        $("").show();
+      }
+
+  });
 });
-alert("fire10");
+// alert("fire10");
