@@ -1,6 +1,10 @@
 * {
   font-family: 'Eagle Lake', cursive;
 }
+html {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/17/27/ac/1727ac629f102cc37ca87cb703f3b1c9.jpg");
+  background: cover;
+}
 
 h2 {
   font-weight: bold;
@@ -10,7 +14,10 @@ h1 {
 }
 
 body {
-  background-color: #d5a560;
+  background: url("../images/scrolls.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #bardTale {
   display: none;
@@ -42,7 +49,7 @@ body {
 
 #startContainer {
   height: 800px;
-  background: url("../images/scrolls.png");
+  /*background: url("../images/scrolls.png");*/
   border: 2px solid red;
   background-size: contain;
   background-repeat: no-repeat;
