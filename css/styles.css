@@ -9,6 +9,9 @@ h2 {
 body {
   background-color: #d5a560;
 }
+p {
+  position: inherit;
+}
 #bardTale {
   display: none;
   padding: 20px;
@@ -28,23 +31,24 @@ body {
   display: none;
 }
 
-#bardImage img{
+#bardImage img {
   height: 200px;
   width: auto;
   border-radius: 100px;
   margin-top: 20px;
 }
+
 #backStoryColumn {
   height: 900px;
-  background-image: url("../images/scrolls.png");
+  background: url("../images/scrolls.png");
   border: 2px solid red;
-  background-repeat: no-repeat;
   background-size: contain;
+  background-repeat: no-repeat;
   padding: 120px;
 }
 
 #startButton {
-
+  
 }
 
 #startContainer {
@@ -147,8 +151,9 @@ body {
 }
 #ufo {
   width: 200px;
+}
 
-@media screen and (max-width:  441px)  {
+/*@media screen and (max-width: 441px) {
   * {
     text-align: center;
   }
@@ -193,4 +198,4 @@ body {
     padding: 60px;
   }
 
-}
+}*/
