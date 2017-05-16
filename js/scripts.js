@@ -8,18 +8,23 @@ function Player(name) {
   this.item = [];
 }
 //Attack Prototype
+
 Player.prototype.attacks = function(life, physical) {
 
   //dice roll simulation
   //when the method is called the paremeters take in the villians life and player's attack
   this.life -= this.life - this.power;
 }
-player.prototype.cast = function(life, magic) {
+
+
+Player.prototype.cast = function(life, magic) {
 
   //dice roll simulation
   //when the method is called the paremeters take in the villians life and player's attack
   this.life -= this.life - this.magic;
 }
+
+
 var villianOne = {
   name: name,
   life: 1,
@@ -31,7 +36,9 @@ var villianOne = {
     //when the method is called the paremeters take in the villians life and player's attack
     this.life -= this.life - this.physical;
   }
+
 };
+alert("fire4");
 var villianTwo = {
   name: name,
   life: 1,
@@ -44,6 +51,7 @@ var villianTwo = {
     this.life -= this.life - this.physical;
   }
 };
+alert("fire5");
 var Boss = {
   name: name,
   life: 1,
@@ -56,15 +64,17 @@ var Boss = {
     this.life -= this.life - this.physical;
   }
 };
+alert("fire6");
 //i need a picture
 var formaldehyde = {
-  healthUp: 10
+  healthUp: 10,
 };
+alert("fire7");
 var stitches = {
-  healthUp: 20
+  healthUp: 20,
 };
-
-//------------------User Interface Logic------------------//
+alert("fire8");
+ //------------------User Interface Logic------------------//
 $(function(){
     $("#bardImage").fadeIn(6000);
     $("#raiseCol").fadeIn(6000);
@@ -105,3 +115,4 @@ $(function(){
   });
 
 });
+alert("fire10");
