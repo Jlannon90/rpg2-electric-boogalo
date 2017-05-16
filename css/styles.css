@@ -5,12 +5,12 @@
 h2 {
   font-weight: bold;
 }
+h1 {
+  font-size: 80px;
+}
 
 body {
   background-color: #d5a560;
-}
-p {
-  position: inherit;
 }
 #bardTale {
   display: none;
@@ -19,15 +19,12 @@ p {
   margin-left: 10px;
   font-size: 25px;
 }
-#bardImage {
-  margin-right: 5px;
-  padding-left: 50px;
-  display: none;
+#colTale {
+  margin: 40px;
 }
-
 #raiseCol {
   height: 200px;
-  padding-top: 90px;
+  margin-top: 150px;
   display: none;
 }
 
@@ -36,24 +33,19 @@ p {
   width: auto;
   border-radius: 100px;
   margin-top: 20px;
+  margin-left: 90px;
 }
 
-#backStoryColumn {
-  height: 900px;
+#startButton {
+
+}
+
+#startContainer {
+  height: 800px;
   background: url("../images/scrolls.png");
   border: 2px solid red;
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 120px;
-}
-
-#startButton {
-  
-}
-
-#startContainer {
-  width: 100%;
-  height: 100%;
 }
 #bardColumn {
   background-image: url("../images/bard.jpg");

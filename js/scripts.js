@@ -8,7 +8,6 @@ function Player(name) {
   this.item = [];
 }
 //Attack Prototype
-
 Player.prototype.attacks = function(life, physical) {
 
   //dice roll simulation
@@ -16,15 +15,11 @@ Player.prototype.attacks = function(life, physical) {
   this.life -= this.life - this.power;
 }
 
-
 Player.prototype.cast = function(life, magic) {
-
   //dice roll simulation
   //when the method is called the paremeters take in the villians life and player's attack
   this.life -= this.life - this.magic;
 }
-
-
 var villianOne = {
   name: name,
   life: 1,
@@ -36,7 +31,6 @@ var villianOne = {
     //when the method is called the paremeters take in the villians life and player's attack
     this.life -= this.life - this.physical;
   }
-
 };
 alert("fire4");
 var villianTwo = {
@@ -93,25 +87,25 @@ $(function(){
   });
 
   $("#oceanCastle").click(function() {
-      console.log("test");
+      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
   });
   $("#village").click(function() {
-      console.log("test");
+      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
   });
   $("#houseOverWater").click(function() {
-      console.log("test");
+      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
   });
   $("#ghostHouse").click(function() {
-      console.log("test");
+      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
   });
   $("#boat").click(function() {
-      console.log("test");
+      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
   });
   $("#tower").click(function() {
-      console.log("test");
+      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
   });
   $("#ufo").click(function() {
-      console.log("test");
+      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
   });
 
 });
