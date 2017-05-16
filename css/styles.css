@@ -114,6 +114,38 @@ body {
   background-position: center;
   text-align: center;
 }
+#trailerPlayerAppear {
+  margin-top: 250px;
+}
+
+#towerPlayerAppear {
+
+}
+
+#hauntedPlayerAppear {
+  margin-top: 750px;
+}
+
+#villagePlayerAppear {
+  margin-top: 400px;
+}
+
+#castlePlayerAppear {
+
+}
+
+#boatPlayerAppear {
+
+}
+
+#housePlayerAppear {
+
+}
+.locationHero {
+  height: 250px;
+
+  margin-left: 80px;
+}
 
 .tinyImages {
   height: 140px;
@@ -130,7 +162,7 @@ body {
   padding-top: 15px;
   padding-left: 20px;
 }
- #mapContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #back, .playerAppear {
+ #mapContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #back, .Tinks, .Tex, .Stunner, .Ned,.playerAppear {
   display: none;
 }
 #mapContainer {
