@@ -85,7 +85,7 @@ body {
   padding-top: 15px;
   padding-left: 20px;
 }
-#characterContainer, #mapContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer {
+#characterContainer, #startContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #back, .playerAppear {
   display: none;
 }
 #mapContainer {
@@ -267,4 +267,13 @@ body {
     padding: 60px;
   }
 
+}*/
+
+/*#towerButton {
+  position: relative;
+  z-index: 10;
+  border: 1px solid red;
+  background: transparent;
+  width: 150px;
+  height: 200px;
 }*/
