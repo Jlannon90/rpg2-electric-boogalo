@@ -57,9 +57,13 @@ var Boss = {
   }
 };
 //i need a picture
-var potion = {
+var formaldehyde = {
   healthUp: 10
-}
+};
+var stitches = {
+  healthUp: 20
+};
+
 //------------------User Interface Logic------------------//
 $(function(){
     $("#bardImage").fadeIn(6000);
