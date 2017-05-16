@@ -52,7 +52,7 @@ body {
 
 #characterButton {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 35px;
 
 }
 
@@ -76,6 +76,50 @@ body {
   background-position: center;
 }
 
+#Tinks {
+  height: 350px;
+  background: url("../images/frame.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+
+}
+
+#Tex {
+  height: 350px;
+  background: url("../images/frame.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+
+}
+#Stunner {
+  height: 350px;
+  background: url("../images/frame.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+
+}
+
+#Ned {
+  height: 350px;
+  background: url("../images/frame.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.tinyImages {
+  height: 140px;
+  width: auto;
+  margin-top: 100px;
+}
+
 #bardColumn {
   background-image: url("../images/bard.jpg");
   height: 800px;
@@ -85,7 +129,7 @@ body {
   padding-top: 15px;
   padding-left: 20px;
 }
-#characterContainer, #startContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #back, .playerAppear {
+ #mapContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #back, .playerAppear {
   display: none;
 }
 #mapContainer {
