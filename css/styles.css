@@ -1,10 +1,6 @@
 * {
   font-family: 'Eagle Lake', cursive;
 }
-html {
-  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/17/27/ac/1727ac629f102cc37ca87cb703f3b1c9.jpg");
-  background: cover;
-}
 
 h2 {
   font-weight: bold;
@@ -14,18 +10,18 @@ h1 {
 }
 
 body {
-  background: url("../images/scrolls.png");
-  background-size: contain;
+  background: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/17/27/ac/1727ac629f102cc37ca87cb703f3b1c9.jpg");
 }
+
+
 #bardTale {
   display: none;
-  padding: 20px;
   margin-top: 20px;
-  margin-left: 10px;
   font-size: 25px;
 }
+
 #colTale {
   margin: 40px;
 }
@@ -39,30 +35,57 @@ body {
   height: 200px;
   width: auto;
   border-radius: 100px;
-  margin-top: 20px;
-  margin-left: 90px;
+  margin-top: 23px;
+  margin-left: 900px;
 }
 
-#startButton {
+#moveBardTitle {
+  padding-right: 200px;
+  padding-top: 110px;
+
+}
+
+#moveCharacterTitle {
+  text-align: center;
+  margin-top: 170px;
+}
+
+#characterButton {
+  text-align: center;
+  margin-top: 25px;
 
 }
 
 #startContainer {
-  height: 800px;
-  /*background: url("../images/scrolls.png");*/
+  height: 1000px;
+  width: auto;
+  background: url("../images/scrolls.png");
   border: 2px solid red;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
+
+#characterContainer {
+  height: 1200px;
+  width: auto;
+  background: url("../images/scrolls.png");
+  border: 2px solid red;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #bardColumn {
   background-image: url("../images/bard.jpg");
-  height: 600px;
+  height: 800px;
+  width: auto;
   background-repeat: no-repeat;
   background-size: contain;
   padding-top: 15px;
   padding-left: 20px;
 }
-#characterContainer, #mapContainer {
+#characterContainer, #mapContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer {
   display: none;
 }
 #mapContainer {
@@ -72,6 +95,52 @@ body {
   height: 1000px;
   overflow: hidden;
 }
+
+#villageContainer {
+  background: url("../images/village-background.png");
+  background-repeat: no-repeat;
+  background-attachment: contain;
+  max-width: 1500px;
+  height: 1000px;
+  margin-top: 140px;
+}
+
+#hauntedContainer {
+  background: url("../images/haunted-house.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 1500px;
+  height: 1000px;
+  margin-top: 140px;
+}
+
+#towerContainer {
+  background: url("../images/tower-background.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 1500px;
+  height: 1000px;
+  margin-top: 140px;
+}
+
+#trailerContainer {
+  background: url("../images/trailer-park.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 1500px;
+  height: 1000px;
+  margin-top: 140px;
+}
+
+#castleContainer {
+  background: url("../images/castle-background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 1500px;
+  height: 1000px;
+  margin-top: 140px;
+}
+
 #mapRow1 {
 
 }
@@ -151,6 +220,7 @@ body {
 #ufo {
   width: 200px;
 }
+
 
 /*@media screen and (max-width: 441px) {
   * {
