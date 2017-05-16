@@ -32,7 +32,7 @@ var villianOne = {
     this.life -= this.life - this.physical;
   }
 };
-alert("fire4");
+// alert("fire4");
 var villianTwo = {
   name: name,
   life: 1,
@@ -45,7 +45,7 @@ var villianTwo = {
     this.life -= this.life - this.physical;
   }
 };
-alert("fire5");
+// alert("fire5");
 var Boss = {
   name: name,
   life: 1,
@@ -58,16 +58,16 @@ var Boss = {
     this.life -= this.life - this.physical;
   }
 };
-alert("fire6");
+// alert("fire6");
 //i need a picture
 var formaldehyde = {
   healthUp: 10,
 };
-alert("fire7");
+// alert("fire7");
 var stitches = {
   healthUp: 20,
 };
-alert("fire8");
+// alert("fire8");
  //------------------User Interface Logic------------------//
 $(function(){
     $("#bardImage").fadeIn(6000);
@@ -86,27 +86,37 @@ $(function(){
     $("#mapContainer").show();
   });
 
-  $("#oceanCastle").click(function() {
-      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
-  });
   $("#village").click(function() {
-      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
+    event.preventDefault();
+    $("#mapContainer").hide();
+    $("#villageContainer").show();
   });
   $("#houseOverWater").click(function() {
       alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
   });
   $("#ghostHouse").click(function() {
-      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
+    event.preventDefault();
+    $("#mapContainer").hide();
+    $("#hauntedContainer").show();
   });
   $("#boat").click(function() {
       alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
   });
   $("#tower").click(function() {
-      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
+    event.preventDefault();
+    $("#mapContainer").hide();
+    $("#towerContainer").show();
   });
   $("#ufo").click(function() {
-      alert("Fully + Functional = Coffee + Breaky - Morning Poo && emptyCup += coffeeRefilledCup || Don't talk to Me");
+    event.preventDefault();
+    $("#mapContainer").hide();
+    $("#trailerContainer").show();
+  });
+  $("#oceanCastle").click(function() {
+    event.preventDefault();
+    $("#mapContainer").hide();
+    $("#castleContainer").show();
   });
 
 });
-alert("fire10");
+// alert("fire10");
