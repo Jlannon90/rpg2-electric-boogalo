@@ -77,9 +77,8 @@ var Boss = {
 
  //------------------User Interface Logic------------------//
 $(function(){
-    $("#bardImage").fadeIn(6000);
     $("#raiseCol").fadeIn(6000);
-    $("#bardTale").show(7000);
+    $("#bardTale").fadeIn(6000);
 
   $("#gameStart").click(function(event) {
     event.preventDefault();
@@ -108,6 +107,9 @@ $(function(){
       $("#locationContainer").show();
       $("#hauntedContainer").show();
       $("#back").show();
+
+      $(".Turkerus").show();
+
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
       }
@@ -129,6 +131,8 @@ $(function(){
     $("#villageContainer").show();
     $("#back").show();
 
+    $(".Turkerus").show();
+
     if(userPlayer.name === "Tinks") {
       $(".Tinks").show();
     }
@@ -144,7 +148,12 @@ $(function(){
   });
   $("#houseOverWater").click(function() {
       $("#mapContainer").hide();
+      $("#locationContainer").show();
+      $("#swampContainer").show();
       $("#back").show();
+
+      $(".Turkerus").show();
+
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
       }
@@ -165,6 +174,7 @@ $(function(){
       $("#locationContainer").show();
       $("#boatContainer").show();
       $("#back").show();
+
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
       }
@@ -186,6 +196,9 @@ $(function(){
     $("#locationContainer").show();
     $("#towerContainer").show();
     $("#back").show();
+
+    $(".Turkerus").show();
+
     if(userPlayer.name === "Tinks") {
       $(".Tinks").show();
     }
@@ -206,6 +219,9 @@ $(function(){
     $("#locationContainer").show();
     $("#trailerContainer").show();
     $("#back").show();
+
+    $(".Turkerus").show();
+
     if(userPlayer.name === "Tinks") {
       $(".Tinks").show();
     }
@@ -223,7 +239,12 @@ $(function(){
   $("#oceanCastle").click(function() {
     event.preventDefault();
     $("#mapContainer").hide();
+    $("#locationContainer").show();
     $("#castleContainer").show();
+    $("#back").show();
+
+    $(".Turkerus").show();
+
     if(userPlayer.name === "Tinks") {
       $(".Tinks").show();
     }

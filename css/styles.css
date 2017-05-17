@@ -162,7 +162,7 @@ body {
   padding-top: 15px;
   padding-left: 20px;
 }
- #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #back, #startContainer, .Tinks, .Tex, .Stunner, .Ned,.playerAppear {
+ #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #back, #startContainer, #swampContainer, .Tinks, .Tex, .Stunner, .Ned, .Turkerus, .playerAppear {
   display: none;
 }
 
@@ -200,6 +200,24 @@ body {
   background-attachment: contain;
   height: 1000px;
   overflow: hidden;
+}
+
+#villageContainer {
+  background: url("../images/village-background.png");
+  background-repeat: no-repeat;
+  background-attachment: contain;
+  max-width: 1500px;
+  height: 1000px;
+  margin-top: 140px;
+}
+
+#swampContainer{
+  background: url("../images/swampshack.jpg");
+  background-repeat: no-repeat;
+  background-attachment: contain;
+  max-width: 1500px;
+  height: 1000px;
+  margin-top: 140px;
 }
 
 #villageContainer {
