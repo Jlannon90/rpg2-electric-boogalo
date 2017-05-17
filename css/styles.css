@@ -86,7 +86,7 @@ body {
   text-align: center;
 
 }
-
+/*//// character selection*/
 #Tex {
   height: 350px;
   background: url("../images/frame.png");
@@ -114,7 +114,7 @@ body {
   background-position: center;
   text-align: center;
 }
-
+/*/// hero and enemy at locations*/
 .hauntedHero {
   height: 150px;
   margin-top: 665px;
@@ -134,13 +134,13 @@ body {
 
 .swampHero {
   height: 150px;
-  margin-top: 315px;
-  margin-left: 15px;
+  margin-top: 475px;
+  margin-left: 35px;
 }
 
 .swampEnemy {
+  margin-top: 200px;
   margin-left: 315px;
-  padding-bottom: 210px;
 }
 
 .villageHero {
@@ -156,13 +156,13 @@ body {
 
 .towerHero {
   height: 150px;
-  margin-top: 770px;
-  margin-left: 15px;
+  margin-top: 800px;
+  margin-left: 115px;
 }
 
 .towerEnemy {
 
-  margin-top: 500px;
+  margin-top: 850px;
   margin-left: 50px;
 }
 
@@ -195,8 +195,70 @@ body {
 
 .locationHide {
   overflow: hidden;
-  border: solid 3px #c19734;
+  border: solid 10px #c19734;
   border-radius: 20px;
+}
+
+/*/////location buttons*/
+
+#gameStart{
+  background-color: #701100;
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  border-color: #f9b652;
+  color: #f9b652;
+  font-size: 30px;
+  text-shadow: 3px 3px #7c5821;
+
+}
+
+#throneRoom {
+  background-color: purple;
+  border-radius: 10px;
+  margin-left: 515px;
+  color: #c19734;
+  border: 1px solid #c19734;
+
+}
+
+
+
+#startButton {
+  margin-top: 10px;
+  background-color: #9a703b;
+  border-radius: 10px;
+  border-color: #620608;
+}
+
+#beginYourJourney {
+  margin-top: 30px;
+  background-color: #b89a6c;
+  border-radius: 10px;
+  border-color: #620608;
+}
+
+#attack {
+  margin-top: 20px;
+  margin-left: 300px;
+  background-color: #e84f4c;
+  border-radius: 10px;
+}
+
+#escape {
+  margin-top: 20px;
+  margin-left: 400px;
+  background-color: #fccf2d;
+  border-radius: 10px;
+}
+
+/*/////location titles*/
+#locationTitle {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 40px;
+  color: #f9b652;
+  text-shadow: 3px 3px #7c5821;
 }
 
 #bardColumn {
@@ -208,7 +270,7 @@ body {
   padding-top: 15px;
   padding-left: 20px;
 }
- #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #back, #startContainer, #swampContainer, #dre, #attack, .Tinks, .Tex, .Stunner, .Ned, .Turkerus, .playerAppear {
+ #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #escape, #startContainer, #swampContainer, #attack, #throneContainer, #throneRoom, .Tinks, .Tex, .Stunner, .Ned, .Turkerus, .playerAppear {
   display: none;
 }
 
@@ -251,21 +313,13 @@ body {
   border-radius: 20px;
 }
 
-#villageContainer {
-  background: url("../images/village-background.png");
-  background-repeat: no-repeat;
-  background-attachment: contain;
-  max-width: 1500px;
-  height: 1000px;
-  margin-top: 140px;
-}
-
 #swampContainer{
   background: url("../images/swampshack.jpg");
   background-repeat: no-repeat;
-  background-attachment: contain;
+  background-attachment: cover;
+  background-size: cover;
   max-width: 1500px;
-  height: 1000px;
+  height: auto;
   margin-top: 140px;
 }
 
@@ -273,8 +327,9 @@ body {
   background: url("../images/village-background.png");
   background-repeat: no-repeat;
   background-attachment: contain;
+  background-size: cover;
   max-width: 1500px;
-  height: 1000px;
+  height: auto;
   margin-top: 140px;
 }
 
@@ -282,8 +337,10 @@ body {
   background: url("../images/haunted-house.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
+  background-size: cover;
   max-width: 1500px;
-  height: 1000px;
+  height: auto;
   margin-top: 140px;
 }
 
@@ -291,17 +348,18 @@ body {
   background: url("../images/tower-background.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  max-width: 1500px;
-  height: 1000px;
-  margin-top: 140px;
+  background-size: cover;
+  max-width: auto;
+  height: 1300px;
 }
 
 #trailerContainer {
   background: url("../images/trailer-park.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+  background-size: cover;
   max-width: 1500px;
-  height: 1000px;
+  height: auto;
   margin-top: 140px;
 }
 
@@ -309,8 +367,9 @@ body {
   background: url("../images/castle-background.png");
   background-repeat: no-repeat;
   background-size: contain;
+  background-size: cover;
   max-width: 1500px;
-  height: 1000px;
+  height: auto;
   margin-top: 140px;
 }
 
@@ -318,10 +377,22 @@ body {
   background: url("../images/river.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+  background-size: cover;
   max-width: 1500px;
-  height: 1000px;
+  height: auto;
   margin-top: 140px;
 }
+
+#throneContainer {
+  background: url("../images/throneroom.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  max-width: 1500px;
+  height: auto;
+  margin-top: 140px;
+}
+
 
 #mapRow1 {
 

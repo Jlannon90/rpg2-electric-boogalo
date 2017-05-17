@@ -2,7 +2,7 @@
 //song array
 //songs[0] - one night
 //songs[1] - forget about dre
-var songs = ["https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/269583066&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/290593608&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true", "https://soundcloud.com/christophrust/what-is-love-8-bit#t=0:01", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/281187091&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"];
+var songs = ["https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/269583066&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/290593608&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"];
 
 //healing option to add health to a weak character
 var formaldehyde = {
@@ -115,7 +115,7 @@ $(function(){
       $("#mapContainer").hide();
       $("#locationContainer").show();
       $("#hauntedContainer").show();
-      $("#back").show();
+      $("#escape").show();
       $("#attack").show();
 
       $(".Turkerus").show();
@@ -139,7 +139,7 @@ $(function(){
     $("#mapContainer").hide();
     $("#locationContainer").show();
     $("#villageContainer").show();
-    $("#back").show();
+    $("#escape").show();
     $("#attack").show();
 
     $(".Turkerus").show();
@@ -158,10 +158,11 @@ $(function(){
     }
   });
   $("#houseOverWater").click(function() {
+      event.preventDefault();
       $("#mapContainer").hide();
       $("#locationContainer").show();
       $("#swampContainer").show();
-      $("#back").show();
+      $("#escape").show();
       $("#attack").show();
 
       $(".Turkerus").show();
@@ -185,7 +186,7 @@ $(function(){
       $("#mapContainer").hide();
       $("#locationContainer").show();
       $("#boatContainer").show();
-      $("#back").show();
+      $("#escape").show();
       $("#attack").show();
 
       if(userPlayer.name === "Tinks") {
@@ -208,7 +209,7 @@ $(function(){
     $("#mapContainer").hide();
     $("#locationContainer").show();
     $("#towerContainer").show();
-    $("#back").show();
+    $("#escape").show();
     $("#attack").show();
 
     $(".Turkerus").show();
@@ -232,7 +233,7 @@ $(function(){
     $("#mapContainer").hide();
     $("#locationContainer").show();
     $("#trailerContainer").show();
-    $("#back").show();
+    $("#escape").show();
     $("#attack").show();
 
     $(".Turkerus").show();
@@ -256,7 +257,8 @@ $(function(){
     $("#mapContainer").hide();
     $("#locationContainer").show();
     $("#castleContainer").show();
-    $("#back").show();
+    $("#throneRoom").show();
+    $("#escape").show();
     $("#attack").show();
 
     $(".Turkerus").show();
@@ -275,7 +277,33 @@ $(function(){
     }
   });
 
-  $("#back").click(function(event) {
+  $("#throneRoom").click(function(event) {
+    event.preventDefault();
+    $("#mapContainer").hide();
+    $("#castleContainer").hide();
+    $("#locationContainer").show();
+    $("#throneContainer").show();
+    $("#throneRoom").hide();
+    $("#escape").show();
+    $("#attack").show();
+
+    $(".Turkerus").show();
+
+    if(userPlayer.name === "Tinks") {
+      $(".Tinks").show();
+    }
+    else if(userPlayer.name === "Tex") {
+      $(".Tex").show();
+    }
+    else if(userPlayer.name === "Ned") {
+      $(".Ned").show();
+    }
+    else if(userPlayer.name === "Stunner") {
+      $(".Stunner").show();
+    }
+  });
+
+  $("#escape").click(function(event) {
     event.preventDefault();
     $("body").prepend('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[0] + '"></iframe>');
     $(".locationHide").hide();

@@ -32,6 +32,7 @@
         </div>
         <div id="moveBardTitle" class="col-md-6 ">
           <h1>The Bard</h1>
+          <h4>weaves a tale...</h4>
         </div>
       </div>
           <div class="row">
@@ -59,7 +60,7 @@
 
           </div>
           <div class="col-xs-1" id="Tinks">
-            <img class="tinyImages" src="images/druid_burned.png"  />
+            <img class="tinyImages hvr-float-shadow" src="images/druid_burned.png"  />
           </div>
           <div class="col-xs-2">
             <h2>Tinks</h2>
@@ -78,7 +79,7 @@
             <input type="radio" name="character" value="Ned">
           </div>
           <div class="col-xs-1" id="Ned">
-            <img class="tinyImages" src="images/necromancer_burned.png"  />
+            <img class="tinyImages hvr-float-shadow" src="images/necromancer_burned.png"  />
           </div>
           <div class="col-xs-3">
 
@@ -89,7 +90,7 @@
 
           </div>
           <div class="col-xs-1" id="Stunner">
-            <img class="tinyImages" src="images/taxidermy-pikachu_burned.png"  />
+            <img class="tinyImages hvr-float-shadow" src="images/taxidermy-pikachu_burned.png"  />
           </div>
           <div class="col-xs-2">
             <h2>Stunner</h2>
@@ -108,14 +109,14 @@
             <input type="radio" name="character" value="Tex">
           </div>
           <div class="col-xs-1" id="Tex">
-            <img class="tinyImages" src="images/cleric_burned.png"  />
+            <img class="tinyImages hvr-float-shadow" src="images/cleric_burned.png"  />
           </div>
           <div class="col-xs-3">
 
           </div>
         </div>
         <div id="characterButton" class="row">
-          <button type="submit" name="button">Begin your journey!</button>
+          <button id="beginYourJourney" type="submit" name="button">Begin your journey!</button>
         </div>
       </form>
     </div>
@@ -156,9 +157,7 @@
       </div>
     </div>
     <div class="container" id="locationContainer">
-      <div class="row">
-
-      </div>
+      <p class="locationTitle"></p>
       <div class="container locationHide" id="villageContainer">
         <div class="row">
           <div class="col-md-9" id="villageLocation">
@@ -210,10 +209,10 @@
                 <img class="Ned towerHero" src="images/necromancer_burned.png" alt="" />
               </div>
               <div id="towerEnemyAppear" class="col-xs-5">
-                <img class="Turkerus towerEnemy" src="images/turkerus_burned.png" alt="" />
+
               </div>
               <div class="col-xs-5">
-
+                <img class="Turkerus towerEnemy" src="images/turkerus_burned.png" alt="" />
               </div>
             </div>
           </div>
@@ -285,18 +284,37 @@
         <div class="row">
           <div class="col-md-12" id="swampLocation">
             <div class="row">
-              <div class="swampPlayerAppear" class="col-xs-1">
+              <div id="swampPlayerAppear" class="col-xs-1">
                 <img class="Tinks swampHero" src="images/druid_burned.png" alt="" />
                 <img class="Tex swampHero" src="images/cleric_burned.png" alt="" />
                 <img class="Stunner swampHero" src="images/taxidermy-pikachu_burned.png" alt="" />
                 <img class="Ned swampHero" src="images/necromancer_burned.png" alt="" />
-                <img class="Turkerus swampEnemy" src="images/turkerus_burned.png" alt="" />
               </div>
               <div class="col-xs-5">
-
+                <img class="Turkerus swampEnemy" src="images/turkerus_burned.png" alt="" />
               </div>
               <div class="col-xs-4">
-                <!-- <img class="Turkerus swampEnemy" src="images/turkerus_burned.png" alt="" /> -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container locationHide" id="throneContainer">
+        <div class="row">
+          <div class="col-md-12" id="throneLocation">
+            <div class="row">
+              <div id="thronePlayerAppear" class="col-xs-1">
+                <img class="Tinks swampHero" src="images/druid_burned.png" alt="" />
+                <img class="Tex swampHero" src="images/cleric_burned.png" alt="" />
+                <img class="Stunner swampHero" src="images/taxidermy-pikachu_burned.png" alt="" />
+                <img class="Ned swampHero" src="images/necromancer_burned.png" alt="" />
+              </div>
+              <div class="col-xs-5">
+                <img class="Turkerus swampEnemy" src="images/turkerus_burned.png" alt="" />
+              </div>
+              <div class="col-xs-4">
+
               </div>
             </div>
           </div>
@@ -304,7 +322,10 @@
       </div>
       <div class="row">
         <button id="attack" type="button" name="button">attack!</button>
-        <button id="back" type="button" name="button">escape</button>
+        <button id="escape" type="button" name="button">escape</button>
+      </div>
+      <div class="row">
+        <button id="throneRoom" type="button" name="button">Throne Room</button>
       </div>
     </div>
   </body>
