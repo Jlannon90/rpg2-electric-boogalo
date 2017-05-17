@@ -115,6 +115,10 @@ body {
   text-align: center;
 }
 
+.enemyStyle {
+  height: 600px;
+}
+
 .hauntedHero {
   height: 150px;
   margin-top: 665px;
