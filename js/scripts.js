@@ -110,11 +110,11 @@ $(function(){
 
       $(".Turkerus").show();
 
-      if(userPlayer.name === "Tinks") {
-        $(".Tinks").show();
-      }
-      else if(userPlayer.name === "Tex") {
+      if(userPlayer.name === "Tex") {
         $(".Tex").show();
+      }
+      else if(userPlayer.name === "Tinks") {
+        $(".Tinks").show();
       }
       else if(userPlayer.name === "Ned") {
         $(".Ned").show();

@@ -65,7 +65,7 @@
           <div class="col-xs-2">
             <h2>Tinks</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              From the day she was born, Tinks has shared a deep connection with nature. The wilds have always been there for her in times of need - a vine snaring a foe that gets too close, and woodland creatures helping her to attack or escape. As a Druid, Tinks uses the power of nature to defeat her enemies. She's also 100% vegan, and she'll probably remind you of this multiple times. Her favorite food is Kale.
             </p>
             <h4>attack: Kale Fart</h4>
             <input type="radio" name="character" value="Tinks" required>
@@ -73,9 +73,9 @@
           <div class="col-xs-2">
             <h2>Ned</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Ned has always been somewhat of a loner, and he told most people that was what he wanted. But deep down, Ned longed for friends and a sense of community - so he became a Necromancer.  Making friends irl is hard, but summoned corpses never argue with you and they always have your back. Ned fights with his undead allies and dominion over darkness. His favorite food is fingers, any kind except chicken.
             </p>
-            <h4>attack: Dead Smell</h4>
+            <h4>attack: Death Hug</h4>
             <input type="radio" name="character" value="Ned">
           </div>
           <div class="col-xs-1" id="Ned">
@@ -95,17 +95,17 @@
           <div class="col-xs-2">
             <h2>Stunner</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Stunner is a warrior with unique powers that came from being struck by lightning, and has a strong affinity for war paint. He literally colors himself in the yellow stuff everyday before leaving the house. Wielding electrical powers, his super charged attacks STUN enemies leaving them crippled before he strikes a finishing blow. He enjoys playing Pokemon and may or may not have a strange fetish for one of the characters. Stunner doesn't eat, he just plugs his tail into a socket.
             </p>
-            <h4>attack: 360 NoScope</h4>
+            <h4>attack: Electric Jazz Hands</h4>
             <input type="radio" name="character" value="Stunner">
           </div>
           <div class="col-xs-2">
             <h2>Tex</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Tex was drawn to the light after a near death experience at Mar del Taco, bit of advice, don't order the nachos.  He joined the holy order as soon as he was able, and combined his affinity for delicious and spicy foods with the healing arts. You can buy his patented Holy Guacamole salve as seen on QVC. His favorite food used to be nachos, but now he sticks to burritos because they are softer and less likely to get wedged in your esophagus.
             </p>
-            <h4>attack: Guacamole Staff</h4>
+            <h4>attack: Holy Guacamole</h4>
             <input type="radio" name="character" value="Tex">
           </div>
           <div class="col-xs-1" id="Tex">
@@ -209,11 +209,11 @@
                 <img class="Stunner towerHero" src="images/taxidermy-pikachu_burned.png" alt="" />
                 <img class="Ned towerHero" src="images/necromancer_burned.png" alt="" />
               </div>
+              <div id="towerEnemyAppear" class="col-xs-5">
+                <img class="Turkerus towerEnemy" src="images/turkerus_burned.png" alt="" />
+              </div>
               <div class="col-xs-5">
 
-              </div>
-              <div id="towerEnemyAppear"class="col-xs-5">
-                <img class="Turkerus towerEnemy" src="images/turkerus_burned.png" alt="" />
               </div>
             </div>
           </div>
@@ -243,7 +243,7 @@
       <div class="container locationHide" id="boatContainer">
         <div class="row">
           <div class="col-md-9" id="boatLocation">
-            <img id="ferryMan" src="images/ferryman_burned.png" alt="" />
+
             <div class="row">
               <div id="boatPlayerAppear" class="col-xs-2">
                 <img class="Tinks boatHero" src="images/druid_burned.png" alt="" />
@@ -252,9 +252,10 @@
                 <img class="Ned boatHero" src="images/necromancer_burned.png" alt="" />
               </div>
               <div class="col-xs-5">
-
+                <img id="ferryMan" src="images/ferryman_burned.png" alt="" />
               </div>
               <div class="col-xs-5">
+
               </div>
             </div>
           </div>
@@ -264,7 +265,7 @@
         <div class="row">
           <div class="col-md-9" id="castleLocation">
             <div class="row">
-              <div class="castlePlayerAppear" class="col-xs-2">
+              <div id="castlePlayerAppear" class="col-xs-2">
                 <img class="Tinks castleHero" src="images/druid_burned.png" alt="" />
                 <img class="Tex castleHero" src="images/cleric_burned.png" alt="" />
                 <img class="Stunner castleHero" src="images/taxidermy-pikachu_burned.png" alt="" />
@@ -282,19 +283,20 @@
       </div>
       <div class="container locationHide" id="swampContainer">
         <div class="row">
-          <div class="col-md-9" id="swampLocation">
+          <div class="col-md-12" id="swampLocation">
             <div class="row">
-              <div class="castlePlayerAppear" class="col-xs-2">
+              <div class="swampPlayerAppear" class="col-xs-1">
                 <img class="Tinks swampHero" src="images/druid_burned.png" alt="" />
                 <img class="Tex swampHero" src="images/cleric_burned.png" alt="" />
                 <img class="Stunner swampHero" src="images/taxidermy-pikachu_burned.png" alt="" />
                 <img class="Ned swampHero" src="images/necromancer_burned.png" alt="" />
+                <img class="Turkerus swampEnemy" src="images/turkerus_burned.png" alt="" />
               </div>
               <div class="col-xs-5">
 
               </div>
-              <div class="col-xs-5">
-                <img class="Turkerus swampEnemy" src="images/turkerus_burned.png" alt="" />
+              <div class="col-xs-4">
+                <!-- <img class="Turkerus swampEnemy" src="images/turkerus_burned.png" alt="" /> -->
               </div>
             </div>
           </div>

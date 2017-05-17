@@ -114,37 +114,77 @@ body {
   background-position: center;
   text-align: center;
 }
-#trailerPlayerAppear {
-  margin-top: 250px;
+
+.hauntedHero {
+  height: 150px;
+  margin-top: 665px;
+  margin-left: 15px;
 }
 
-#towerPlayerAppear {
-
+.hauntedEnemy {
+  margin-top: 350px;
+  margin-left: 30px;
 }
 
-#hauntedPlayerAppear {
-  margin-top: 750px;
+.trailerHero {
+  height: 150px;
+  margin-top: 265px;
+  margin-left: 15px;
 }
 
-#villagePlayerAppear {
-  margin-top: 400px;
+.swampHero {
+  height: 150px;
+  margin-top: 315px;
+  margin-left: 15px;
 }
 
-#castlePlayerAppear {
-
+.swampEnemy {
+  margin-left: 315px;
+  padding-bottom: 210px;
 }
 
-#boatPlayerAppear {
-
+.villageHero {
+  height: 150px;
+  margin-top: 475px;
+  margin-left: 60px;
 }
 
-#housePlayerAppear {
-
+.villageEnemy {
+  margin-top: 280px;
+  margin-left: 35px;
 }
-.locationHero {
-  height: 250px;
 
-  margin-left: 80px;
+.towerHero {
+  height: 150px;
+  margin-top: 770px;
+  margin-left: 15px;
+}
+
+.towerEnemy {
+
+  margin-top: 500px;
+  margin-left: 50px;
+}
+
+.boatHero {
+  height: 150px;
+  margin-top:300px;
+  margin-left: 60px;
+}
+
+#castleHeroAppear {
+  width: 300px;
+}
+
+.castleHero {
+  height: 150px;
+  margin-top:530px;
+  margin-left: 60px;
+}
+
+.castleEnemy {
+  margin-left: 20px;
+  margin-top: 175px;
 }
 
 .tinyImages {
