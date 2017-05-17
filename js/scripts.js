@@ -102,6 +102,25 @@ $(function(){
 
     var userPlayer = new Player(characterChoice);
 
+    $("#ghostHouse").click(function(event) {
+      event.preventDefault();
+      $("#mapContainer").hide();
+      $("#locationContainer").show();
+      $("#hauntedContainer").show();
+      $("#back").show();
+      if(userPlayer.name === "Tinks") {
+        $(".Tinks").show();
+      }
+      else if(userPlayer.name === "Tex") {
+        $(".Tex").show();
+      }
+      else if(userPlayer.name === "Ned") {
+        $(".Ned").show();
+      }
+      else if(userPlayer.name === "Stunner") {
+        $(".Stunner").show();
+      }
+    });
 
   $("#village").click(function(event) {
     event.preventDefault();
@@ -122,7 +141,6 @@ $(function(){
     else if(userPlayer.name === "Stunner") {
       $(".Stunner").show();
     }
-
   });
   $("#houseOverWater").click(function() {
       $("#mapContainer").hide();
@@ -130,36 +148,18 @@ $(function(){
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
       }
-      else if(Player.name === "Tex") {
+      else if(userPlayer.name === "Tex") {
         $(".Tex").show();
       }
-      else if(Player.name === "Ned") {
+      else if(userPlayer.name === "Ned") {
         $(".Ned").show();
       }
-      else if(Player.name === "Stunner") {
+      else if(userPlayer.name === "Stunner") {
         $(".Stunner").show();
       }
 
   });
-  $("#ghostHouse").click(function(event) {
-    event.preventDefault();
-    $("#mapContainer").hide();
-    $("#locationContainer").show();
-    $("#hauntedContainer").show();
-    $("#back").show();
-    if(userPlayer.name === "Tinks") {
-      $(".Tinks").show();
-    }
-    else if(Player.name === "Tex") {
-      $(".Tex").show();
-    }
-    else if(Player.name === "Ned") {
-      $(".Ned").show();
-    }
-    else if(Player.name === "Stunner") {
-      $(".Stunner").show();
-    }
-  });
+
   $("#boat").click(function(event) {
       $("#mapContainer").hide();
       $("#locationContainer").show();
@@ -168,13 +168,13 @@ $(function(){
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
       }
-      else if(Player.name === "Tex") {
+      else if(userPlayer.name === "Tex") {
         $(".Tex").show();
       }
-      else if(Player.name === "Ned") {
+      else if(userPlayer.name === "Ned") {
         $(".Ned").show();
       }
-      else if(Player.name === "Stunner") {
+      else if(userPlayer.name === "Stunner") {
         $(".Stunner").show();
       }
 
@@ -189,13 +189,13 @@ $(function(){
     if(userPlayer.name === "Tinks") {
       $(".Tinks").show();
     }
-    if(Player.name === "Tex") {
+    if(userPlayer.name === "Tex") {
       $(".Tex").show();
     }
-    if(Player.name === "Ned") {
+    if(userPlayer.name === "Ned") {
       $(".Ned").show();
     }
-    if(Player.name === "Stunner") {
+    if(userPlayer.name === "Stunner") {
       $(".Stunner").show();
     }
   });
@@ -209,13 +209,13 @@ $(function(){
     if(userPlayer.name === "Tinks") {
       $(".Tinks").show();
     }
-    if(Player.name === "Tex") {
+    if(userPlayer.name === "Tex") {
       $(".Tex").show();
     }
-    if(Player.name === "Ned") {
+    if(userPlayer.name === "Ned") {
       $(".Ned").show();
     }
-    if(Player.name === "Stunner") {
+    if(userPlayer.name === "Stunner") {
       $(".Stunner").show();
     }
   });
@@ -227,13 +227,13 @@ $(function(){
     if(userPlayer.name === "Tinks") {
       $(".Tinks").show();
     }
-    if(Player.name === "Tex") {
+    if(userPlayer.name === "Tex") {
       $(".Tex").show();
     }
-    if(Player.name === "Ned") {
+    if(userPlayer.name === "Ned") {
       $(".Ned").show();
     }
-    if(Player.name === "Stunner") {
+    if(userPlayer.name === "Stunner") {
       $(".Stunner").show();
     }
   });
