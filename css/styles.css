@@ -162,9 +162,38 @@ body {
   padding-top: 15px;
   padding-left: 20px;
 }
- #mapContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #back, .Tinks, .Tex, .Stunner, .Ned,.playerAppear {
+ #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #back, #startContainer, .Tinks, .Tex, .Stunner, .Ned,.playerAppear {
   display: none;
 }
+
+#titleScreenContainer {
+  padding-top: 200px;
+  text-align: center;
+  font-family: 'Lobster Two', cursive;
+}
+
+#title {
+  color: #f9b652;
+  margin-bottom: 40px;
+  text-shadow: 3px 3px #7c5821;
+}
+
+#sword {
+  max-width: 600px;
+}
+
+#mapTitle {
+  font-family: 'Lobster Two', cursive;
+  color: #f9b652;
+  text-shadow: 3px 3px #7c5821;
+  font-size: 50px;
+}
+
+#ferryMan {
+  margin-top: 400px;
+  margin-left: 500px;
+}
+
 #mapContainer {
   background-image: url("../images/map.png");
   background-repeat: no-repeat;
@@ -211,6 +240,15 @@ body {
 
 #castleContainer {
   background: url("../images/castle-background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 1500px;
+  height: 1000px;
+  margin-top: 140px;
+}
+
+#boatContainer {
+  background: url("../images/river.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   max-width: 1500px;
@@ -273,7 +311,9 @@ body {
 }
 .mapLocations {
   max-width: 220px;
+
 }
+
 #oceanCastle {
   max-width: none;
   width: 250px;

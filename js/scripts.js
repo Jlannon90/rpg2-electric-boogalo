@@ -81,6 +81,12 @@ $(function(){
     $("#raiseCol").fadeIn(6000);
     $("#bardTale").show(7000);
 
+  $("#gameStart").click(function(event) {
+    event.preventDefault();
+    $("#titleScreenContainer").hide();
+    $("#startContainer").show();
+  });
+
   $("#startButton").click(function(event){
     event.preventDefault();
     $("#startContainer").hide();
@@ -156,6 +162,8 @@ $(function(){
   });
   $("#boat").click(function(event) {
       $("#mapContainer").hide();
+      $("#locationContainer").show();
+      $("#boatContainer").show();
       $("#back").show();
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
