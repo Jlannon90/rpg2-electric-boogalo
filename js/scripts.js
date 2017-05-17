@@ -1,4 +1,9 @@
 //------------------Business Logic------------------//
+//song array
+//songs[0] - one night
+//songs[1] - forget about dre
+var songs = ["https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/269583066&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/290593608&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true", "https://soundcloud.com/christophrust/what-is-love-8-bit#t=0:01", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/281187091&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"];
+
 //healing option to add health to a weak character
 var formaldehyde = {
   healthUp: 100,
@@ -77,6 +82,7 @@ var Boss = {
 
  //------------------User Interface Logic------------------//
 $(function(){
+  $("body").append('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[1] + '"></iframe>');
     $("#raiseCol").fadeIn(6000);
     $("#bardTale").fadeIn(6000);
 
@@ -92,10 +98,13 @@ $(function(){
     $("#characterContainer").show();
   });
 
+  //click button takes user to map
   $("#formCharacter").submit(function(event){
     event.preventDefault();
+    $("body").append('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[0] + '"></iframe>');
     $("#characterContainer").hide();
     $("#mapContainer").show();
+    $("#dre").show();
 
     var characterChoice = $("input:radio:checked").val();
 
@@ -107,6 +116,7 @@ $(function(){
       $("#locationContainer").show();
       $("#hauntedContainer").show();
       $("#back").show();
+      $("#attack").show();
 
       $(".Turkerus").show();
 
@@ -130,6 +140,7 @@ $(function(){
     $("#locationContainer").show();
     $("#villageContainer").show();
     $("#back").show();
+    $("#attack").show();
 
     $(".Turkerus").show();
 
@@ -151,6 +162,7 @@ $(function(){
       $("#locationContainer").show();
       $("#swampContainer").show();
       $("#back").show();
+      $("#attack").show();
 
       $(".Turkerus").show();
 
@@ -174,6 +186,7 @@ $(function(){
       $("#locationContainer").show();
       $("#boatContainer").show();
       $("#back").show();
+      $("#attack").show();
 
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
@@ -196,6 +209,7 @@ $(function(){
     $("#locationContainer").show();
     $("#towerContainer").show();
     $("#back").show();
+    $("#attack").show();
 
     $(".Turkerus").show();
 
@@ -219,6 +233,7 @@ $(function(){
     $("#locationContainer").show();
     $("#trailerContainer").show();
     $("#back").show();
+    $("#attack").show();
 
     $(".Turkerus").show();
 
@@ -242,6 +257,7 @@ $(function(){
     $("#locationContainer").show();
     $("#castleContainer").show();
     $("#back").show();
+    $("#attack").show();
 
     $(".Turkerus").show();
 
@@ -261,6 +277,7 @@ $(function(){
 
   $("#back").click(function(event) {
     event.preventDefault();
+    $("body").prepend('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[0] + '"></iframe>');
     $(".locationHide").hide();
     $("#locationContainer").hide();
     $("#mapContainer").show();

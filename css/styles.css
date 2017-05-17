@@ -193,6 +193,12 @@ body {
   margin-top: 100px;
 }
 
+.locationHide {
+  overflow: hidden;
+  border: solid 3px #c19734;
+  border-radius: 20px;
+}
+
 #bardColumn {
   background-image: url("../images/bard.jpg");
   height: 800px;
@@ -202,7 +208,7 @@ body {
   padding-top: 15px;
   padding-left: 20px;
 }
- #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #back, #startContainer, #swampContainer, .Tinks, .Tex, .Stunner, .Ned, .Turkerus, .playerAppear {
+ #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #back, #startContainer, #swampContainer, #dre, #attack, .Tinks, .Tex, .Stunner, .Ned, .Turkerus, .playerAppear {
   display: none;
 }
 
@@ -235,11 +241,14 @@ body {
 }
 
 #mapContainer {
+  margin-top: 100px;
   background-image: url("../images/map.png");
   background-repeat: no-repeat;
   background-attachment: contain;
   height: 1000px;
   overflow: hidden;
+  border: solid 3px #c19734;
+  border-radius: 20px;
 }
 
 #villageContainer {
