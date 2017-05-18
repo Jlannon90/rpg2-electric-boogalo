@@ -454,7 +454,7 @@ $(function(){
       $("#locationContainer").hide();
       $("#mapContainer").show();
     });
->>>>>>> 2b0dcbf0a3a583ffa630aa17932b97f7a0e92948
+
   });
 });
 // alert("fire10");
