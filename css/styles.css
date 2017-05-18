@@ -35,7 +35,7 @@ body {
   width: auto;
   border-radius: 100px;
   margin-top: 28px;
-  margin-left: 900px;
+  margin-left: 75%;
   border-width: thick;
   border-style: double;
   border-color: black;
@@ -484,52 +484,41 @@ body {
 }
 
 
-/*@media screen and (max-width: 441px) {
-  * {
-    text-align: center;
+@media screen and (max-width: 1202px) {
+
+  #sword {
+    width: 90%;
   }
 
-  h1 {
-    float: right;
+  #leafBanner {
+    width: 100%;
+  }
+
+  #gameStart {
+    font-size: auto;
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 657px) {
+  #title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 441px) {
+
+  #title {
+    font-size: 25px;
+  }
+
+  #gameStart {
     font-size: 20px;
-    padding-right: 20px;
+    width: 100px;
+    height: auto;
   }
 
-  #bardTale {
-    display: none;
-    padding: 0px;
-    margin-top: 0px;
-    margin-left: 0px;
-    font-size: 10px;
-  }
-  #bardImage {
-    margin-right: 0px;
-    padding-left: 0px;
-  }
-
-  #raiseCol {
-    height: 0px;
-    padding-top: 0px;
-  }
-
-  #bardImage img{
-    height: 80px;
-    width: auto;
-    border-radius: 100px;
-    margin-top: 0px;
-    float: left;
-  }
-
-  #backStoryColumn {
-    height: 350px;
-    background-image: url("../images/scrolls.png");
-    border: 2px solid red;
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 60px;
-  }
-
-}*/
+}
 
 /*#towerButton {
   position: relative;
@@ -538,4 +527,4 @@ body {
   background: transparent;
   width: 150px;
   height: 200px;
-}*/
+}

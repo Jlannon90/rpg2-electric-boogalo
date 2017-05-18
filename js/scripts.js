@@ -289,7 +289,6 @@ $(function(){
         $("#mapContainer").hide();
         $("#locationContainer").show();
         $("#boatContainer").show();
-        $("#attackBoat").show();
         $(".escape").show();
         $("#boatTitle").show();
 
