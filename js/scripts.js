@@ -12,15 +12,50 @@ var formaldehyde = {
 function Player(name) {
   this.name = name;
   this.life = 100;
-  this.physical = 5;
+  this.physical = 10;
   this.magic = 8;
   this.item = [formaldehyde];
 }
-//Attack Prototype
-Player.prototype.attack = function(life, attack) {
 
-  this.life -= this.life - this.power;
+//array containing enemy names
+var enemies = ["ally", "angel cat", "deer", "lobstrosity", "steampunk mongoose", "turkerus"];
+//array containing corresponding enemy image locations
+var enemyImages = ["ally(-)_burned.png", "angel-cat_burned.png", "deer-ally_burned.png", "lobstrosity_burned.png", "steampunk-mongoose_burned.png", "turkerus_burned.png"];
+// //array containing corresponding enemy items
+// var enemyItems = ["crabItem", "mongooseItem", "squirrelItem", "chickenItem", "turkeyItem"];
+// //array containing corresponding enemy attacks
+// var enemyAttacks = ["crabAttack", "mongooseAttack", "squirrelAttack", "chickenAttack", "turkeyAttack"];
+
+//constructor for enemy
+function Enemy(input) {
+this.name = enemies[input];
+this.life = 100;
+this.physical = Math.floor(Math.random()*3 + 8);
+this.magic = Math.floor(Math.random()*3 + 8);
+// this.item = enemyItems[input];
+// this.attack = enemyAttacks[input];
+this.image = enemyImages[input];
 }
+
+
+//Player Attack Prototype
+Player.prototype.playerAttack = function(input) {
+  var roll = [0, 5, 10];
+  var rollNumber = Math.floor(Math.random()*2);
+  input.life -= (this.physical + roll[rollNumber]);
+}
+
+//Enemy Attack Prototype
+Enemy.prototype.enemyAttack = function(input) {
+  var roll = [0, 5, 10];
+  var rollNumber = Math.floor(Math.random()*2);
+  console.log(rollNumber);
+  input.life -= (this.physical + roll[rollNumber]);
+  console.log(roll[rollNumber]);
+  console.log(this.physical);
+  console.log(this.physical + roll[rollNumber]);
+}
+//Cast Prototype
 Player.prototype.cast = function(life, magic) {
 
   this.life -= this.life - this.magic;
@@ -36,37 +71,6 @@ Player.prototype.heal = function(life, item) {
 
 }
 
-Player.prototype.roll = function(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + 1);
-}
-
-var villianOne = {
-  name: "Trifler",
-  life: 100,
-  physical: 2,
-  magic: 5,
-  item: [formaldehyde],
-  attack: function(life, power) {
-    //dice roll simulation
-    //when the method is called the paremeters take in the villians life and player's attack
-    this.life -= this.life - this.physical;
-  }
-};
-// alert("fire4");
-var villianTwo = {
-  name: "Trife",
-  life: 100,
-  physical: 4,
-  magic: 8,
-  item: [formaldehyde],
-  attack: function(life, power) {
-    //dice roll simulation
-    //when the method is called the paremeters take in the villians life and player's attack
-    this.life -= this.life - this.physical;
-  }
-};
 // alert("fire5");
 var Boss = {
   name: "Steve-O",
@@ -105,11 +109,11 @@ $(function(){
     $("#characterContainer").hide();
     $("#mapContainer").show();
     $("#dre").show();
-
     var characterChoice = $("input:radio:checked").val();
-
     var userPlayer = new Player(characterChoice);
 
+//--------Locations----------//
+    //Ghost House Location
     $("#ghostHouse").click(function(event) {
       event.preventDefault();
       $("#mapContainer").hide();
@@ -117,8 +121,6 @@ $(function(){
       $("#hauntedContainer").show();
       $("#escape").show();
       $("#attack").show();
-
-      $(".Turkerus").show();
 
       if(userPlayer.name === "Tex") {
         $(".Tex").show();
@@ -132,41 +134,46 @@ $(function(){
       else if(userPlayer.name === "Stunner") {
         $(".Stunner").show();
       }
+      //if-statement that generates a random enemy on first visit to location and prevents generating another random enemy on subsequent visits
+      if ($("#hauntedEnemyAppear").children().length < 1) {
+        //store random number between 0 and the current length of the enemies array to select an enemy character
+        var position = Math.floor(Math.random()*enemies.length);
+        //create constructor for randomly selected enemy character
+        var newEnemy = new Enemy(position);
+        //remove randomly selected enemy and corresonding image from arrays to prevent being selected again
+        enemies.splice(position, 1);
+        enemyImages.splice(position, 1);
+        $("#hauntedEnemyAppear").append('<img class="enemyStyle" src="images/' + newEnemy.image + '" alt=""/>');
+      }
+
+      //Attack Sequence
+      $("#attack").on("click", function() {
+        userPlayer.playerAttack(newEnemy);
+        console.log(newEnemy.life);
+        if (newEnemy.life > 0) {
+          setTimeout(function() {
+            newEnemy.enemyAttack(userPlayer);
+          }, 4000);
+          console.log(userPlayer.life);
+          if (userPlayer.life <= 0) {
+            alert("you died lol");
+            location.reload();
+          }
+        }
+        else {
+          alert("enemy died");
+        }
+      });
+
     });
-
-  $("#village").click(function(event) {
-    event.preventDefault();
-    $("#mapContainer").hide();
-    $("#locationContainer").show();
-    $("#villageContainer").show();
-    $("#escape").show();
-    $("#attack").show();
-
-    $(".Turkerus").show();
-
-    if(userPlayer.name === "Tinks") {
-      $(".Tinks").show();
-    }
-    else if(userPlayer.name === "Tex") {
-      $(".Tex").show();
-    }
-    else if(userPlayer.name === "Ned") {
-      $(".Ned").show();
-    }
-    else if(userPlayer.name === "Stunner") {
-      $(".Stunner").show();
-    }
-  });
-  $("#houseOverWater").click(function() {
+    //Village Location
+    $("#village").click(function(event) {
       event.preventDefault();
       $("#mapContainer").hide();
       $("#locationContainer").show();
-      $("#swampContainer").show();
+      $("#villageContainer").show();
       $("#escape").show();
       $("#attack").show();
-
-      $(".Turkerus").show();
-
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
       }
@@ -180,13 +187,44 @@ $(function(){
         $(".Stunner").show();
       }
 
-  });
+      //if-statement that generates a random enemy on first visit to location and prevents generating another random enemy on subsequent visits
+      if ($("#villageEnemyAppear").children().length < 1) {
+        //store random number between 0 and the current length of the enemies array to select an enemy character
+        var position = Math.floor(Math.random()*enemies.length);
+        //create constructor for randomly selected enemy character
+        var newEnemy = new Enemy(position);
+        //remove randomly selected enemy and corresonding image from arrays to prevent being selected again
+        enemies.splice(position, 1);
+        enemyImages.splice(position, 1);
+        $("#villageEnemyAppear").append('<img class="enemyStyle" src="images/' + newEnemy.image + '" alt=""/>');
+      }
 
-  $("#boat").click(function(event) {
+      //Attack Sequence
+      $("#attack").on("click", function() {
+        userPlayer.playerAttack(newEnemy);
+        console.log(newEnemy.life);
+        if (newEnemy.life > 0) {
+          setTimeout(function() {
+            newEnemy.enemyAttack(userPlayer);
+          }, 4000);
+          console.log(userPlayer.life);
+          if (userPlayer.life <= 0) {
+            alert("you died lol");
+            location.reload();
+          }
+        }
+        else {
+          alert("enemy died");
+        }
+      });
+
+    });
+    //Swamp Location
+    $("#houseOverWater").click(function() {
       $("#mapContainer").hide();
       $("#locationContainer").show();
-      $("#boatContainer").show();
       $("#escape").show();
+      $("#swampContainer").show();
       $("#attack").show();
 
       if(userPlayer.name === "Tinks") {
@@ -202,114 +240,221 @@ $(function(){
         $(".Stunner").show();
       }
 
-  });
-  $("#tower").click(function(event) {
-    event.preventDefault();
-    $("#towerButton").hide();
-    $("#mapContainer").hide();
-    $("#locationContainer").show();
-    $("#towerContainer").show();
-    $("#escape").show();
-    $("#attack").show();
+      //if-statement that generates a random enemy on first visit to location and prevents generating another random enemy on subsequent visits
+      if ($("#swampEnemyAppear").children().length < 1) {
+        //store random number between 0 and the current length of the enemies array to select an enemy character
+        var position = Math.floor(Math.random()*enemies.length);
+        //create constructor for randomly selected enemy character
+        var newEnemy = new Enemy(position);
+        //remove randomly selected enemy and corresonding image from arrays to prevent being selected again
+        enemies.splice(position, 1);
+        enemyImages.splice(position, 1);
+        $("#swampEnemyAppear").append('<img class="enemyStyle" src="images/' + newEnemy.image + '" alt=""/>');
+      }
 
-    $(".Turkerus").show();
+      //Attack Sequence
+      $("#attack").on("click", function() {
+        userPlayer.playerAttack(newEnemy);
+        console.log(newEnemy.life);
+        if (newEnemy.life > 0) {
+          setTimeout(function() {
+            newEnemy.enemyAttack(userPlayer);
+            console.log(userPlayer.life);
+          }, 4000);
+          if (userPlayer.life <= 0) {
+            alert("you died lol");
+            location.reload();
+          }
+        }
+        else {
+          alert("enemy died");
+        }
+      });
 
-    if(userPlayer.name === "Tinks") {
-      $(".Tinks").show();
-    }
-    if(userPlayer.name === "Tex") {
-      $(".Tex").show();
-    }
-    if(userPlayer.name === "Ned") {
-      $(".Ned").show();
-    }
-    if(userPlayer.name === "Stunner") {
-      $(".Stunner").show();
-    }
-  });
+    });
+    //Boat Location
+    $("#boat").click(function(event) {
+        $("#mapContainer").hide();
+        $("#locationContainer").show();
+        $("#boatContainer").show();
+        $("#escape").show();
+        $("#attack").show();
 
-  $("#ufo").click(function(event) {
-    event.preventDefault();
-    $("#mapContainer").hide();
-    $("#locationContainer").show();
-    $("#trailerContainer").show();
-    $("#escape").show();
-    $("#attack").show();
+        if(userPlayer.name === "Tinks") {
+          $(".Tinks").show();
+        }
+        else if(userPlayer.name === "Tex") {
+          $(".Tex").show();
+        }
+        else if(userPlayer.name === "Ned") {
+          $(".Ned").show();
+        }
+        else if(userPlayer.name === "Stunner") {
+          $(".Stunner").show();
+        }
 
-    $(".Turkerus").show();
+    });
+    //Tower Location
+    $("#tower").click(function(event) {
+      event.preventDefault();
+      $("#towerButton").hide();
+      $("#mapContainer").hide();
+      $("#locationContainer").show();
+      $("#towerContainer").show();
+      $("#escape").show();
+      $("#attack").show();
 
-    if(userPlayer.name === "Tinks") {
-      $(".Tinks").show();
-    }
-    if(userPlayer.name === "Tex") {
-      $(".Tex").show();
-    }
-    if(userPlayer.name === "Ned") {
-      $(".Ned").show();
-    }
-    if(userPlayer.name === "Stunner") {
-      $(".Stunner").show();
-    }
-  });
+      if(userPlayer.name === "Tinks") {
+        $(".Tinks").show();
+      }
+      if(userPlayer.name === "Tex") {
+        $(".Tex").show();
+      }
+      if(userPlayer.name === "Ned") {
+        $(".Ned").show();
+      }
+      if(userPlayer.name === "Stunner") {
+        $(".Stunner").show();
+      }
 
-  $("#oceanCastle").click(function() {
-    event.preventDefault();
-    $("#mapContainer").hide();
-    $("#locationContainer").show();
-    $("#castleContainer").show();
-    $("#throneRoom").show();
-    $("#escape").show();
-    $("#attack").show();
+      //if-statement that generates a random enemy on first visit to location and prevents generating another random enemy on subsequent visits
+      if ($("#towerEnemyAppear").children().length < 1) {
+        //store random number between 0 and the current length of the enemies array to select an enemy character
+        var position = Math.floor(Math.random()*enemies.length);
+        //create constructor for randomly selected enemy character
+        var newEnemy = new Enemy(position);
+        //remove randomly selected enemy and corresonding image from arrays to prevent being selected again
+        enemies.splice(position, 1);
+        enemyImages.splice(position, 1);
+        $("#towerEnemyAppear").append('<img class="enemyStyle" src="images/' + newEnemy.image + '" alt=""/>');
+      }
 
-    $(".Turkerus").show();
+      //Attack Sequence
+      $("#attack").on("click", function() {
+        userPlayer.playerAttack(newEnemy);
+        console.log(newEnemy.life);
+        if (newEnemy.life > 0) {
+          setTimeout(function() {
+            newEnemy.enemyAttack(userPlayer);
+          }, 4000);
+          console.log(userPlayer.life);
+          if (userPlayer.life <= 0) {
+            alert("you died lol");
+            location.reload();
+          }
+        }
+        else {
+          alert("enemy died");
+        }
+      });
 
-    if(userPlayer.name === "Tinks") {
-      $(".Tinks").show();
-    }
-    if(userPlayer.name === "Tex") {
-      $(".Tex").show();
-    }
-    if(userPlayer.name === "Ned") {
-      $(".Ned").show();
-    }
-    if(userPlayer.name === "Stunner") {
-      $(".Stunner").show();
-    }
-  });
+    });
+    //UFO Location
+    $("#ufo").click(function(event) {
+      event.preventDefault();
+      $("#mapContainer").hide();
+      $("#locationContainer").show();
+      $("#trailerContainer").show();
+      $("#escape").show();
+      $("#attack").show();
 
-  $("#throneRoom").click(function(event) {
-    event.preventDefault();
-    $("#mapContainer").hide();
-    $("#castleContainer").hide();
-    $("#locationContainer").show();
-    $("#throneContainer").show();
-    $("#throneRoom").hide();
-    $("#escape").show();
-    $("#attack").show();
+      if(userPlayer.name === "Tinks") {
+        $(".Tinks").show();
+      }
+      if(userPlayer.name === "Tex") {
+        $(".Tex").show();
+      }
+      if(userPlayer.name === "Ned") {
+        $(".Ned").show();
+      }
+      if(userPlayer.name === "Stunner") {
+        $(".Stunner").show();
+      }
 
-    $(".Turkerus").show();
+      //if-statement that generates a random enemy on first visit to location and prevents generating another random enemy on subsequent visits
+      if ($("#trailerEnemyAppear").children().length < 1) {
+        //store random number between 0 and the current length of the enemies array to select an enemy character
+        var position = Math.floor(Math.random()*enemies.length);
+        //create constructor for randomly selected enemy character
+        var newEnemy = new Enemy(position);
+        //remove randomly selected enemy and corresonding image from arrays to prevent being selected again
+        enemies.splice(position, 1);
+        enemyImages.splice(position, 1);
+        $("#trailerEnemyAppear").append('<img class="enemyStyle" src="images/' + newEnemy.image + '" alt=""/>');
+      }
 
-    if(userPlayer.name === "Tinks") {
-      $(".Tinks").show();
-    }
-    else if(userPlayer.name === "Tex") {
-      $(".Tex").show();
-    }
-    else if(userPlayer.name === "Ned") {
-      $(".Ned").show();
-    }
-    else if(userPlayer.name === "Stunner") {
-      $(".Stunner").show();
-    }
-  });
+      //Attack Sequence
+      $("#attack").on("click", function() {
+        userPlayer.playerAttack(newEnemy);
+        console.log(newEnemy.life);
+        if (newEnemy.life > 0) {
+          setTimeout(function() {
+            newEnemy.enemyAttack(userPlayer);
+          }, 4000);
+          console.log(userPlayer.life);
+          if (userPlayer.life <= 0) {
+            alert("you died lol");
+            location.reload();
+          }
+        }
+        else {
+          alert("enemy died");
+        }
+      });
 
-  $("#escape").click(function(event) {
-    event.preventDefault();
-    $("body").prepend('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[0] + '"></iframe>');
-    $(".locationHide").hide();
-    $("#locationContainer").hide();
-    $("#mapContainer").show();
-  });
+    });
+    //Castle Location
+    $("#oceanCastle").click(function() {
+      event.preventDefault();
+      $("#mapContainer").hide();
+      $("#locationContainer").show();
+      $("#castleContainer").show();
+      $("#escape").show();
+      $("#attack").show();
+
+
+      if(userPlayer.name === "Tinks") {
+        $(".Tinks").show();
+      }
+      if(userPlayer.name === "Tex") {
+        $(".Tex").show();
+      }
+      if(userPlayer.name === "Ned") {
+        $(".Ned").show();
+      }
+      if(userPlayer.name === "Stunner") {
+        $(".Stunner").show();
+      }
+
+      //Attack Sequence
+      $("#attack").on("click", function() {
+        userPlayer.playerAttack(newEnemy);
+        console.log(newEnemy.life);
+        if (newEnemy.life > 0) {
+          setTimeout(function() {
+            newEnemy.enemyAttack(userPlayer);
+          }, 4000);
+          console.log(userPlayer.life);
+          if (userPlayer.life <= 0) {
+            alert("you died lol");
+            location.reload();
+          }
+        }
+        else {
+          alert("enemy died");
+        }
+      });
+
+    });
+    //escape to Map Button
+    $("#escape").click(function(event) {
+      event.preventDefault();
+      $("body").prepend('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[0] + '"></iframe>');
+      $(".locationHide").hide();
+      $("#locationContainer").hide();
+      $("#mapContainer").show();
+    });
+>>>>>>> 2b0dcbf0a3a583ffa630aa17932b97f7a0e92948
   });
 });
 // alert("fire10");

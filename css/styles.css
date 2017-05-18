@@ -114,7 +114,15 @@ body {
   background-position: center;
   text-align: center;
 }
+
 /*/// hero and enemy at locations*/
+
+
+.enemyStyle {
+  height: 600px;
+}
+
+
 .hauntedHero {
   height: 150px;
   margin-top: 665px;
