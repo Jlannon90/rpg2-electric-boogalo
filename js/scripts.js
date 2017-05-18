@@ -142,34 +142,34 @@ $(function(){
         console.log("Player Attack - Player:",userPlayer);
         console.log("Player Attack - Enemey:",newEnemy);
         if (newEnemy.life < 100 && newEnemy.life >= 90) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#hauntedBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 90 && newEnemy.life >= 80) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#hauntedBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 80 && newEnemy.life >= 70) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#hauntedBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 70 && newEnemy.life >= 60) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#hauntedBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 60 && newEnemy.life >= 50) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#hauntedBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 50 && newEnemy.life >= 40) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#hauntedBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 40 && newEnemy.life >= 30) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#hauntedBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 30 && newEnemy.life >= 20) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#hauntedBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 20 && newEnemy.life >= 10) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#hauntedBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 10 && newEnemy.life <= 0) {
-          $(".healthBarEnemy").animate({width: "0px"}, "slow");
+          $("#hauntedBar").animate({width: "0px"}, "slow");
         }
         if (newEnemy.life > 0) {
           setTimeout(function() {
@@ -207,7 +207,7 @@ $(function(){
             if (userPlayer.life < 10 && userPlayer.life <= 0) {
               $(".healthBarUser").animate({width: "0px"}, "slow");
             }
-            
+
           }, 1500);
           if
            (userPlayer.life <= 0) {
@@ -265,34 +265,34 @@ $(function(){
         console.log("Player Attack - Player:",userPlayer);
         console.log("Player Attack - Enemey:",newEnemy);
         if (newEnemy.life < 100 && newEnemy.life >= 90) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#villageBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 90 && newEnemy.life >= 80) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#villageBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 80 && newEnemy.life >= 70) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#villageBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 70 && newEnemy.life >= 60) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#villageBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 60 && newEnemy.life >= 50) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#villageBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 50 && newEnemy.life >= 40) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#villageBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 40 && newEnemy.life >= 30) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#villageBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 30 && newEnemy.life >= 20) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#villageBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 20 && newEnemy.life >= 10) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#villageBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 10 && newEnemy.life <= 0) {
-          $(".healthBarEnemy").animate({width: "0px"}, "slow");
+          $("#villageBar").animate({width: "0px"}, "slow");
         }
         if (newEnemy.life > 0) {
           setTimeout(function() {
@@ -330,7 +330,6 @@ $(function(){
             if (userPlayer.life < 10 && userPlayer.life <= 0) {
               $(".healthBarUser").animate({width: "0px"}, "slow");
             }
-            
           }, 1500);
           if
            (userPlayer.life <= 0) {
@@ -387,34 +386,34 @@ $(function(){
         console.log("Player Attack - Player:",userPlayer);
         console.log("Player Attack - Enemey:",newEnemy);
         if (newEnemy.life < 100 && newEnemy.life >= 90) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#swampBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 90 && newEnemy.life >= 80) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#swampBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 80 && newEnemy.life >= 70) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#swampBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 70 && newEnemy.life >= 60) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#swampBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 60 && newEnemy.life >= 50) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#swampBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 50 && newEnemy.life >= 40) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#swampBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 40 && newEnemy.life >= 30) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#swampBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 30 && newEnemy.life >= 20) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#swampBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 20 && newEnemy.life >= 10) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#swampBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 10 && newEnemy.life <= 0) {
-          $(".healthBarEnemy").animate({width: "0px"}, "slow");
+          $("#swampBar").animate({width: "0px"}, "slow");
         }
         if (newEnemy.life > 0) {
           setTimeout(function() {
@@ -452,7 +451,7 @@ $(function(){
             if (userPlayer.life < 10 && userPlayer.life <= 0) {
               $(".healthBarUser").animate({width: "0px"}, "slow");
             }
-            
+
           }, 1500);
         if (userPlayer.life <= 0) {
             alert("you died lol");
@@ -533,34 +532,34 @@ $(function(){
         console.log("Player Attack - Player:",userPlayer);
         console.log("Player Attack - Enemey:",newEnemy);
         if (newEnemy.life < 100 && newEnemy.life >= 90) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#towerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 90 && newEnemy.life >= 80) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#towerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 80 && newEnemy.life >= 70) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#towerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 70 && newEnemy.life >= 60) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#towerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 60 && newEnemy.life >= 50) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#towerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 50 && newEnemy.life >= 40) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#towerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 40 && newEnemy.life >= 30) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#towerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 30 && newEnemy.life >= 20) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#towerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 20 && newEnemy.life >= 10) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#towerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 10 && newEnemy.life <= 0) {
-          $(".healthBarEnemy").animate({width: "0px"}, "slow");
+          $("#towerBar").animate({width: "0px"}, "slow");
         }
         if (newEnemy.life > 0) {
           setTimeout(function() {
@@ -655,34 +654,34 @@ $(function(){
         console.log("Player Attack - Player:",userPlayer);
         console.log("Player Attack - Enemey:",newEnemy);
         if (newEnemy.life < 100 && newEnemy.life >= 90) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#trailerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 90 && newEnemy.life >= 80) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#trailerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 80 && newEnemy.life >= 70) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#trailerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 70 && newEnemy.life >= 60) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#trailerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 60 && newEnemy.life >= 50) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#trailerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 50 && newEnemy.life >= 40) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#trailerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 40 && newEnemy.life >= 30) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#trailerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 30 && newEnemy.life >= 20) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#trailerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 20 && newEnemy.life >= 10) {
-          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          $("#trailerBar").animate({width: "-=10px"}, "slow");
         }
         if (newEnemy.life < 10 && newEnemy.life <= 0) {
-          $(".healthBarEnemy").animate({width: "0px"}, "slow");
+          $("#trailerBar").animate({width: "0px"}, "slow");
         }
         if (newEnemy.life > 0) {
           setTimeout(function() {
@@ -778,34 +777,34 @@ $(function(){
           console.log("Player Attack - Player:",userPlayer);
           console.log("Player Attack - Enemey:",newEnemy);
           if (newEnemy.life < 100 && newEnemy.life >= 90) {
-            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+            $("#castleBar").animate({width: "-=10px"}, "slow");
           }
           if (newEnemy.life < 90 && newEnemy.life >= 80) {
-            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+            $("#castleBar").animate({width: "-=10px"}, "slow");
           }
           if (newEnemy.life < 80 && newEnemy.life >= 70) {
-            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+            $("#castleBar").animate({width: "-=10px"}, "slow");
           }
           if (newEnemy.life < 70 && newEnemy.life >= 60) {
-            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+            $("#castleBar").animate({width: "-=10px"}, "slow");
           }
           if (newEnemy.life < 60 && newEnemy.life >= 50) {
-            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+            $("#castleBar").animate({width: "-=10px"}, "slow");
           }
           if (newEnemy.life < 50 && newEnemy.life >= 40) {
-            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+            $("#castleBar").animate({width: "-=10px"}, "slow");
           }
           if (newEnemy.life < 40 && newEnemy.life >= 30) {
-            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+            $("#castleBar").animate({width: "-=10px"}, "slow");
           }
           if (newEnemy.life < 30 && newEnemy.life >= 20) {
-            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+            $("#castleBar").animate({width: "-=10px"}, "slow");
           }
           if (newEnemy.life < 20 && newEnemy.life >= 10) {
-            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+            $("#castleBar").animate({width: "-=10px"}, "slow");
           }
           if (newEnemy.life < 10 && newEnemy.life <= 0) {
-            $(".healthBarEnemy").animate({width: "0px"}, "slow");
+            $("#castleBar").animate({width: "0px"}, "slow");
           }
           if (newEnemy.life > 0) {
             setTimeout(function() {
@@ -862,6 +861,10 @@ $(function(){
     //escape to Map Button
     $(".escape").click(function(event) {
       event.preventDefault();
+      $(".healthBarUser").animate({width: "100px"}, "slow");
+      $(".healthBarEnemy").animate({width: "+=100px;"}, "slow");
+
+
       $("body").prepend('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[0] + '"></iframe>');
       $(".locationHide").hide();
       $("#locationContainer").hide();
