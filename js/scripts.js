@@ -64,7 +64,7 @@ Player.prototype.cast = function(life, magic) {
 Player.prototype.heal = function(life, item) {
 
   this.life += this.life
-  
+
 
   if (this.life > 100) {
     return this.life = 100;
@@ -120,8 +120,9 @@ $(function(){
       $("#mapContainer").hide();
       $("#locationContainer").show();
       $("#hauntedContainer").show();
-      $("#escape").show();
-      $("#attack").show();
+      $("#attackHaunted").show();
+      $(".escape").show();
+      $("#hauntedTitle").show();
 
       if(userPlayer.name === "Tex") {
         $(".Tex").show();
@@ -145,6 +146,7 @@ $(function(){
         enemies.splice(position, 1);
         enemyImages.splice(position, 1);
         $("#hauntedEnemyAppear").append('<img class="enemyStyle" src="images/' + newEnemy.image + '" alt=""/>');
+
       }
 
       //Attack Sequence
@@ -175,8 +177,10 @@ $(function(){
       $("#mapContainer").hide();
       $("#locationContainer").show();
       $("#villageContainer").show();
-      $("#escape").show();
-      $("#attack").show();
+      $("#attackVillage").show();
+      $(".escape").show();
+      $("#villageTitle").show();
+
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
       }
@@ -228,9 +232,10 @@ $(function(){
     $("#houseOverWater").click(function() {
       $("#mapContainer").hide();
       $("#locationContainer").show();
-      $("#escape").show();
+      $("#attackSwamp").show();
+      $(".escape").show();
       $("#swampContainer").show();
-      $("#attack").show();
+      $("#swampTitle").show();
 
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
@@ -284,8 +289,9 @@ $(function(){
         $("#mapContainer").hide();
         $("#locationContainer").show();
         $("#boatContainer").show();
-        $("#escape").show();
-        $("#attack").show();
+        $("#attackBoat").show();
+        $(".escape").show();
+        $("#boatTitle").show();
 
         if(userPlayer.name === "Tinks") {
           $(".Tinks").show();
@@ -308,8 +314,9 @@ $(function(){
       $("#mapContainer").hide();
       $("#locationContainer").show();
       $("#towerContainer").show();
-      $("#escape").show();
-      $("#attack").show();
+      $("#attackTower").show();
+      $(".escape").show();
+      $("#towerTitle").show();
 
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
@@ -364,8 +371,9 @@ $(function(){
       $("#mapContainer").hide();
       $("#locationContainer").show();
       $("#trailerContainer").show();
-      $("#escape").show();
-      $("#attack").show();
+      $("#attackTrailer").show();
+      $(".escape").show();
+      $("#trailerTitle").show();
 
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
@@ -420,8 +428,10 @@ $(function(){
       $("#mapContainer").hide();
       $("#locationContainer").show();
       $("#castleContainer").show();
-      $("#escape").show();
-      $("#attack").show();
+      $("#attackCastle").show();
+      $(".escape").show();
+      $("#throneRoom").show();
+      $("#castleTitle").show();
 
 
       if(userPlayer.name === "Tinks") {
@@ -460,12 +470,41 @@ $(function(){
 
     });
     //escape to Map Button
-    $("#escape").click(function(event) {
+    $(".escape").click(function(event) {
       event.preventDefault();
       $("body").prepend('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[0] + '"></iframe>');
       $(".locationHide").hide();
       $("#locationContainer").hide();
       $("#mapContainer").show();
+      $(".locTitle").hide();
+      $(".attack").hide();
+
+    });
+
+    //throne room Button
+    $("#throneRoom").click(function(event) {
+      event.preventDefault();
+      $("#castleContainer").hide();
+      $("#throneContainer").show();
+      $("#throneRoom").hide();
+      $("#attackThrone").show();
+      $(".escape").show();
+      $(".locTitle").hide();
+      $("#throneTitle").show();
+
+      if(userPlayer.name === "Tinks") {
+        $(".Tinks").show();
+      }
+      if(userPlayer.name === "Tex") {
+        $(".Tex").show();
+      }
+      if(userPlayer.name === "Ned") {
+        $(".Ned").show();
+      }
+      if(userPlayer.name === "Stunner") {
+        $(".Stunner").show();
+      }
+
     });
 
   });

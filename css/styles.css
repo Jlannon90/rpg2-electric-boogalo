@@ -15,7 +15,6 @@ body {
   background-image: url("https://s-media-cache-ak0.pinimg.com/originals/17/27/ac/1727ac629f102cc37ca87cb703f3b1c9.jpg");
 }
 
-
 #bardTale {
   display: none;
   margin-top: 20px;
@@ -129,14 +128,14 @@ body {
   margin-left: 15px;
 }
 
-.hauntedEnemy {
-  margin-top: 350px;
-  margin-left: 30px;
+#hauntedEnemyAppear {
+  margin-top: 220px;
+  margin-left: 350px;
 }
 
 .trailerHero {
   height: 150px;
-  margin-top: 265px;
+  margin-top: 385px;
   margin-left: 15px;
 }
 
@@ -146,20 +145,20 @@ body {
   margin-left: 35px;
 }
 
-.swampEnemy {
-  margin-top: 200px;
-  margin-left: 315px;
+#swampEnemyAppear {
+  margin-top: 100px;
+  margin-left: 415px;
 }
 
 .villageHero {
   height: 150px;
-  margin-top: 475px;
+  margin-top: 675px;
   margin-left: 60px;
 }
 
-.villageEnemy {
+#villageEnemyAppear {
   margin-top: 280px;
-  margin-left: 35px;
+  margin-left: 350px;
 }
 
 .towerHero {
@@ -168,10 +167,9 @@ body {
   margin-left: 115px;
 }
 
-.towerEnemy {
-
-  margin-top: 850px;
-  margin-left: 50px;
+#towerEnemyAppear {
+  margin-top: 690px;
+  margin-left: 300px;
 }
 
 .boatHero {
@@ -190,7 +188,7 @@ body {
   margin-left: 60px;
 }
 
-.castleEnemy {
+#castleEnemyAppear {
   margin-left: 20px;
   margin-top: 175px;
 }
@@ -246,14 +244,14 @@ body {
   border-color: #620608;
 }
 
-#attack {
+.attack {
   margin-top: 20px;
   margin-left: 300px;
   background-color: #e84f4c;
   border-radius: 10px;
 }
 
-#escape {
+.escape {
   margin-top: 20px;
   margin-left: 400px;
   background-color: #fccf2d;
@@ -278,7 +276,7 @@ body {
   padding-top: 15px;
   padding-left: 20px;
 }
- #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #escape, #startContainer, #swampContainer, #attack, #throneContainer, #throneRoom, .Tinks, .Tex, .Stunner, .Ned, .Turkerus, .playerAppear {
+ #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #escape, #startContainer, #swampContainer, .attack, #throneContainer, #throneRoom, .Tinks, .Tex, .Stunner, .Ned, .Turkerus, .playerAppear, .locTitle {
   display: none;
 }
 
@@ -292,6 +290,13 @@ body {
   color: #f9b652;
   margin-bottom: 40px;
   text-shadow: 3px 3px #7c5821;
+}
+
+.locTitle {
+  color: #f9b652;
+  text-shadow: 3px 3px #7c5821;
+  text-align: center;
+  padding-bottom: -20px;
 }
 
 #sword {
@@ -338,7 +343,6 @@ body {
   background-size: cover;
   max-width: 1500px;
   height: auto;
-  margin-top: 140px;
 }
 
 #hauntedContainer {
@@ -349,7 +353,6 @@ body {
   background-size: cover;
   max-width: 1500px;
   height: auto;
-  margin-top: 140px;
 }
 
 #towerContainer {
@@ -368,7 +371,6 @@ body {
   background-size: cover;
   max-width: 1500px;
   height: auto;
-  margin-top: 140px;
 }
 
 #castleContainer {
@@ -378,7 +380,6 @@ body {
   background-size: cover;
   max-width: 1500px;
   height: auto;
-  margin-top: 140px;
 }
 
 #boatContainer {
@@ -388,7 +389,6 @@ body {
   background-size: cover;
   max-width: 1500px;
   height: auto;
-  margin-top: 140px;
 }
 
 #throneContainer {
@@ -398,7 +398,6 @@ body {
   background-size: cover;
   max-width: 1500px;
   height: auto;
-  margin-top: 140px;
 }
 
 

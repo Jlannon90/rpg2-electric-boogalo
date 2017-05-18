@@ -157,7 +157,14 @@
       </div>
     </div>
     <div class="container" id="locationContainer">
-      <p class="locationTitle"></p>
+      <h2 class="locTitle" id="villageTitle">The Village</h2>
+      <h2 class="locTitle" id="hauntedTitle">The Ghost House</h2>
+      <h2 class="locTitle" id="towerTitle">The Tower</h2>
+      <h2 class="locTitle" id="trailerTitle">The Trailer Park / Site 0</h2>
+      <h2 class="locTitle" id="swampTitle">The Swamp Shack</h2>
+      <h2 class="locTitle" id="throneTitle">The Throne Room</h2>
+      <h2 class="locTitle" id="castleTitle">The Prince's Castle</h2>
+      <h2 class="locTitle" id="boatTitle">The Ferry Man</h2>
       <div class="container locationHide" id="villageContainer">
         <div class="row">
           <div class="col-md-9" id="villageLocation">
@@ -212,7 +219,7 @@
 
               </div>
               <div class="col-xs-5">
-                <img class="Turkerus towerEnemy" src="images/turkerus_burned.png" alt="" />
+
               </div>
             </div>
           </div>
@@ -292,9 +299,9 @@
                 <img class="Ned swampHero" src="images/necromancer_burned.png" alt="" />
               </div>
               <div class="col-xs-5">
-                <img class="Turkerus swampEnemy" src="images/turkerus_burned.png" alt="" />
+
               </div>
-              <div class="col-xs-4">
+              <div class="col-xs-4" id="swampEnemyAppear">
 
               </div>
             </div>
@@ -311,16 +318,39 @@
                 <img class="Stunner swampHero" src="images/taxidermy-pikachu_burned.png" alt="" />
                 <img class="Ned swampHero" src="images/necromancer_burned.png" alt="" />
               </div>
-              <div class="col-xs-4" id="swampEnemyAppear">
+              <div class="col-xs-4" id="throneRoomEnemyAppear">
+
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <button id="attack" type="button" name="button">attack!</button>
-        <button id="escape" type="button" name="button">escape</button>
+      <div id="villageButtonRow" class="row">
+        <button class="attack" id="attackVillage" type="button" name="button">attack!</button>
       </div>
+      <div id="hauntedButtonRow" class="row">
+        <button class="attack" id="attackHaunted" type="button" name="button">attack!</button>
+      </div>
+      <div id="swampButtonRow" class="row">
+        <button class="attack" id="attackSwamp" type="button" name="button">attack!</button>
+      </div>
+      <div id="trailerButtonRow" class="row">
+        <button class="attack" id="attackTrailer" type="button" name="button">attack!</button>
+      </div>
+      <div id="boatButtonRow" class="row">
+        <button class="attack" id="attackBoat" type="button" name="button">attack!</button>
+      </div>
+      <div id="towerButtonRow" class="row">
+        <button class="attack" id="attackTower" type="button" name="button">attack!</button>
+      </div>
+      <div id="castleButtonRow" class="row">
+        <button class="attack" id="attackCastle" type="button" name="button">attack!</button>
+      </div>
+      <div id="throneButtonRow" class="row">
+        <button class="attack" id="attackThrone" type="button" name="button">attack!</button>
+        <button class="escape" type="button" name="button">escape</button>
+      </div>
+
       <div class="row">
         <button id="throneRoom" type="button" name="button">Throne Room</button>
       </div>
