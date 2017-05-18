@@ -30,8 +30,8 @@ var enemyImages = ["ally(-)_burned.png", "angel-cat_burned.png", "deer-ally_burn
 function Enemy(input) {
 this.name = enemies[input];
 this.life = 100;
-this.physical = Math.floor(Math.random()*3 + 8);
-this.magic = Math.floor(Math.random()*3 + 8);
+this.physical = Math.floor(Math.random()*5 + 8);
+this.magic = Math.floor(Math.random()*5 + 8);
 // this.item = enemyItems[input];
 // this.attack = enemyAttacks[input];
 this.image = enemyImages[input];
@@ -66,10 +66,11 @@ Player.prototype.heal = function() {
 var castleCounter = 0;
 // alert("fire5");
 var Boss = {
-  name: "Steve-O",
+  name: "Vlad",
   life: 100,
-  physical: 8,
-  magic: 10,
+  physical : Math.floor(Math.random()*4 + 8),
+  magic : Math.floor(Math.random()*4 + 8),
+  image : "boss_burned.png"
 };
 
  //------------------User Interface Logic------------------//
@@ -93,7 +94,7 @@ $(function(){
   //click button takes user to map
   $("#formCharacter").submit(function(event){
     event.preventDefault();
-    $("body").append('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[0] + '" loop></iframe>');
+    $("body").append('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[0] + '"></iframe>');
     $("#characterContainer").hide();
     $("#mapContainer").show();
     $("#dre").show();
@@ -512,28 +513,21 @@ $(function(){
       if (castleCounter === 6) {
         $("#attackThrone").show();
         //if-statement that generates a random enemy on first visit to location and prevents generating another random enemy on subsequent visits
-        if ($("#throneEnemyAppear").children().length < 1) {
-          //store random number between 0 and the current length of the enemies array to select an enemy character
-          var position = Math.floor(Math.random()*enemies.length);
-          //create constructor for randomly selected enemy character
-          var newEnemy = new Enemy(position);
-          //remove randomly selected enemy and corresonding image from arrays to prevent being selected again
-          enemies.splice(position, 1);
-          enemyImages.splice(position, 1);
-          $("#throneEnemyAppear").append('<img class="enemyStyle" src="images/' + newEnemy.image + '" alt=""/>');
+        if ($("#throneRoomEnemyAppear").children().length < 1) {
+          $("#throneRoomEnemyAppear").append('<img class="bossStyle" src="images/' + Boss.image + '" alt=""/>');
         }
 
         //Attack Sequence
         $("#attackThrone").on("click", function() {
-          userPlayer.playerAttack(newEnemy);
+          userPlayer.playerAttack(Boss);
           console.log("Player Attack - Player:",userPlayer);
-          console.log("Player Attack - Enemey:",newEnemy);
-          if (newEnemy.life > 0) {
+          console.log("Player Attack - Enemey:",Boss);
+          if (Boss.life > 0) {
             setTimeout(function() {
-              newEnemy.enemyAttack(userPlayer);
+              Boss.enemyAttack(userPlayer);
             }, 1500);
             console.log("Enemy Attack - Player:",userPlayer);
-            console.log("Enemy Attack - Enemey:",newEnemy);
+            console.log("Enemy Attack - Enemey:",Boss);
             if (userPlayer.life <= 0) {
               alert("you died lol");
               // location.reload();
