@@ -533,10 +533,13 @@ $(function(){
             }
           }
           else {
-            alert("Congrats! You killed the boss....you MURDERER!!!!");
-            setTimeout(function(){userPlayer.heal();}, 2000);
-            $("#attackThrone").hide();
-
+            $("body").prepend('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[1] + '"></iframe>');
+            $("#throneContainer").hide();
+            $(".locTitle").hide();
+            $(".attack").hide();
+            $(".escape").hide();
+            $("#winContainer").show();
+            $("#prince").show();
           }
         });
       }

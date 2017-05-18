@@ -189,7 +189,7 @@ body {
 }
 
 #castleEnemyAppear {
-  margin-left: 20px;
+  margin-left: 320px;
   margin-top: 175px;
 }
 
@@ -283,7 +283,7 @@ body {
   padding-top: 15px;
   padding-left: 20px;
 }
- #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, .escape, #startContainer, #swampContainer, .attack, #throneContainer, #throneRoom, .Tinks, .Tex, .Stunner, .Ned, .Turkerus, .playerAppear, .locTitle {
+ #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, .escape, #startContainer, #swampContainer, .attack, #throneContainer, #throneRoom, #prince, #winContainer, .Tinks, .Tex, .Stunner, .Ned, .Turkerus, .playerAppear, .locTitle {
   display: none;
 }
 
@@ -297,6 +297,14 @@ body {
   color: #f9b652;
   margin-bottom: 40px;
   text-shadow: 3px 3px #7c5821;
+}
+
+#winContainer {
+  font-size: 40px;
+  color: #f9b652;
+  text-shadow: 3px 3px #7c5821;
+  font-family: 'Lobster Two', cursive;
+  text-align: center;
 }
 
 .locTitle {
