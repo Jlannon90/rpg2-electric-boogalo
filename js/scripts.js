@@ -1,7 +1,7 @@
 //------------------Business Logic------------------//
 //song array
-//songs[0] - one night
-//songs[1] - forget about dre
+//songs[0] - forget about dre
+//songs[1] - one night
 var songs = ["https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/269583066&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/290593608&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"];
 
 //healing option to add health to a weak character
@@ -30,8 +30,8 @@ var enemyImages = ["ally(-)_burned.png", "angel-cat_burned.png", "deer-ally_burn
 function Enemy(input) {
 this.name = enemies[input];
 this.life = 100;
-this.physical = Math.floor(Math.random()*3 + 8);
-this.magic = Math.floor(Math.random()*3 + 8);
+this.physical = Math.floor(Math.random()*5 + 8);
+this.magic = Math.floor(Math.random()*5 + 8);
 // this.item = enemyItems[input];
 // this.attack = enemyAttacks[input];
 this.image = enemyImages[input];
@@ -49,11 +49,7 @@ Player.prototype.playerAttack = function(input) {
 Enemy.prototype.enemyAttack = function(input) {
   var roll = [0, 5, 10];
   var rollNumber = Math.floor(Math.random()*2);
-  console.log(rollNumber);
   input.life -= (this.physical + roll[rollNumber]);
-  console.log(roll[rollNumber]);
-  console.log(this.physical);
-  console.log(this.physical + roll[rollNumber]);
 }
 //Cast Prototype
 Player.prototype.cast = function(life, magic) {
@@ -61,28 +57,20 @@ Player.prototype.cast = function(life, magic) {
   this.life -= this.life - this.magic;
 }
   //heal prototype that heals character
-Player.prototype.heal = function(life, item) {
-
-  this.life += this.life
-
-
-  if (this.life > 100) {
-    return this.life = 100;
+Player.prototype.heal = function() {
+  if (this.life < 100) {
+    this.life = 100;
   }
-
 }
-
+//Array that allows access to Castle after defeating all locations
+var castleCounter = 0;
 // alert("fire5");
 var Boss = {
-  name: "Steve-O",
+  name: "Vlad",
   life: 100,
-  physical: 8,
-  magic: 10,
-  attack: function(life, power) {
-    //dice roll simulation
-    //when the method is called the paremeters take in the villians life and player's attack
-    this.life -= this.life - this.physical;
-  }
+  physical : Math.floor(Math.random()*4 + 8),
+  magic : Math.floor(Math.random()*4 + 8),
+  image : "boss_burned.png"
 };
 
  //------------------User Interface Logic------------------//
@@ -150,23 +138,26 @@ $(function(){
       }
 
       //Attack Sequence
-      $("#attack").on("click", function() {
+      $("#attackHaunted").on("click", function() {
         userPlayer.playerAttack(newEnemy);
-        console.log(newEnemy.life);
+        console.log("Player Attack - Player:",userPlayer);
+        console.log("Player Attack - Enemey:",newEnemy);
         if (newEnemy.life > 0) {
           setTimeout(function() {
             newEnemy.enemyAttack(userPlayer);
-          }, 4000);
-          console.log(userPlayer.life);
+            console.log("Enemy Attack - Player:",userPlayer);
+            console.log("Enemy Attack - Enemey:",newEnemy);
+          }, 1500);
           if (userPlayer.life <= 0) {
-            alert("you died lol");
-            location.reload();
+            alert("you died lol what a loser!!");
+            // location.reload();
           }
         }
         else {
-          alert("enemy died");
-          userPlayer.heal();
-          alert(userPlayer.life);
+          alert("congrats on killing something.");
+          setTimeout(function(){userPlayer.heal();}, 2000);
+          $("#attackHaunted").hide();
+          castleCounter += 1;
         }
       });
 
@@ -207,23 +198,26 @@ $(function(){
       }
 
       //Attack Sequence
-      $("#attack").on("click", function() {
+      $("#attackVillage").on("click", function() {
         userPlayer.playerAttack(newEnemy);
-        console.log(newEnemy.life);
+        console.log("Player Attack - Player:",userPlayer);
+        console.log("Player Attack - Enemey:",newEnemy);
         if (newEnemy.life > 0) {
           setTimeout(function() {
             newEnemy.enemyAttack(userPlayer);
-          }, 4000);
-          console.log(userPlayer.life);
+            console.log("Enemy Attack - Player:",userPlayer);
+            console.log("Enemy Attack - Enemey:",newEnemy);
+          }, 1500);
           if (userPlayer.life <= 0) {
-            alert("you died lol");
-            location.reload();
+            alert("you died lol what a loser!!");
+            // location.reload();
           }
         }
         else {
-          alert("enemy died");
-          userPlayer.heal();
-          alert(userPlayer.life);
+          alert("Dang, you won. It was a rather weak opponent so you shouldn't feel too proud of yourself.");
+          setTimeout(function(){userPlayer.heal();}, 2000);
+          $("#attackVillage").hide();
+          castleCounter += 1;
         }
       });
 
@@ -263,23 +257,26 @@ $(function(){
       }
 
       //Attack Sequence
-      $("#attack").on("click", function() {
+      $("#attackSwamp").on("click", function() {
         userPlayer.playerAttack(newEnemy);
-        console.log(newEnemy.life);
+        console.log("Player Attack - Player:",userPlayer);
+        console.log("Player Attack - Enemey:",newEnemy);
         if (newEnemy.life > 0) {
           setTimeout(function() {
             newEnemy.enemyAttack(userPlayer);
-            console.log(userPlayer.life);
-          }, 4000);
+            console.log("Enemy Attack - Player:",userPlayer);
+            console.log("Enemy Attack - Enemey:",newEnemy);
+          }, 1500);
           if (userPlayer.life <= 0) {
-            alert("you died lol");
-            location.reload();
+            alert("you died lol what a loser!!");
+            // location.reload();
           }
         }
         else {
-          alert("enemy died");
-          userPlayer.heal();
-          alert(userPlayer.life);
+          alert("You actually did something for once in your life.");
+          setTimeout(function(){userPlayer.heal();}, 2000);
+          $("#attackSwamp").hide();
+          castleCounter += 1;
         }
       });
 
@@ -343,23 +340,26 @@ $(function(){
       }
 
       //Attack Sequence
-      $("#attack").on("click", function() {
+      $("#attackTower").on("click", function() {
         userPlayer.playerAttack(newEnemy);
-        console.log(newEnemy.life);
+        console.log("Player Attack - Player:",userPlayer);
+        console.log("Player Attack - Enemey:",newEnemy);
         if (newEnemy.life > 0) {
           setTimeout(function() {
             newEnemy.enemyAttack(userPlayer);
-          }, 4000);
-          console.log(userPlayer.life);
+          }, 1500);
+          console.log("Enemy Attack - Player:",userPlayer);
+          console.log("Enemy Attack - Enemey:",newEnemy);
           if (userPlayer.life <= 0) {
-            alert("you died lol");
-            location.reload();
+            alert("you died lol what a loser!!!");
+            // location.reload();
           }
         }
         else {
-          alert("enemy died");
-          userPlayer.heal();
-          alert(userPlayer.life);
+          alert("Wow. You killed something. Good job, I guess.");
+          setTimeout(function(){userPlayer.heal();}, 2000);
+          $("#attackTower").hide();
+          castleCounter += 1;
         }
       });
 
@@ -400,23 +400,26 @@ $(function(){
       }
 
       //Attack Sequence
-      $("#attack").on("click", function() {
+      $("#attackTrailer").on("click", function() {
         userPlayer.playerAttack(newEnemy);
-        console.log(newEnemy.life);
+        console.log("Player Attack - Player:",userPlayer);
+        console.log("Player Attack - Enemey:",newEnemy);
         if (newEnemy.life > 0) {
           setTimeout(function() {
             newEnemy.enemyAttack(userPlayer);
-          }, 4000);
-          console.log(userPlayer.life);
+          }, 1500);
+          console.log("Enemy Attack - Player:",userPlayer);
+          console.log("Enemy Attack - Enemey:",newEnemy);
           if (userPlayer.life <= 0) {
-            alert("you died lol");
-            location.reload();
+            alert("you died lol what a loser!!");
+            // location.reload();
           }
         }
         else {
-          alert("enemy died");
-          userPlayer.heal();
-          alert(userPlayer.life);
+          alert("OMG! Look what you've done! What a terrible person you are!");
+          setTimeout(function(){userPlayer.heal();}, 2000);
+          $("#attackTrailer").hide();
+          castleCounter += 1;
         }
       });
 
@@ -427,11 +430,8 @@ $(function(){
       $("#mapContainer").hide();
       $("#locationContainer").show();
       $("#castleContainer").show();
-      $("#attackCastle").show();
       $(".escape").show();
-      $("#throneRoom").show();
       $("#castleTitle").show();
-
 
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
@@ -446,48 +446,52 @@ $(function(){
         $(".Stunner").show();
       }
 
-      //Attack Sequence
-      $("#attack").on("click", function() {
-        userPlayer.playerAttack(newEnemy);
-        console.log(newEnemy.life);
-        if (newEnemy.life > 0) {
-          setTimeout(function() {
-            newEnemy.enemyAttack(userPlayer);
-          }, 4000);
-          console.log(userPlayer.life);
-          if (userPlayer.life <= 0) {
-            alert("you died lol");
-            location.reload();
+      if (castleCounter === 5) {
+        $("#attackCastle").show();
+        //if-statement that generates a random enemy on first visit to location and prevents generating another random enemy on subsequent visits
+        if ($("#castleEnemyAppear").children().length < 1) {
+          //store random number between 0 and the current length of the enemies array to select an enemy character
+          var position = Math.floor(Math.random()*enemies.length);
+          //create constructor for randomly selected enemy character
+          var newEnemy = new Enemy(position);
+          //remove randomly selected enemy and corresonding image from arrays to prevent being selected again
+          enemies.splice(position, 1);
+          enemyImages.splice(position, 1);
+          $("#castleEnemyAppear").append('<img class="enemyStyle" src="images/' + newEnemy.image + '" alt=""/>');
+        }
+
+        //Attack Sequence
+        $("#attackCastle").on("click", function() {
+          userPlayer.playerAttack(newEnemy);
+          console.log("Player Attack - Player:",userPlayer);
+          console.log("Player Attack - Enemey:",newEnemy);
+          if (newEnemy.life > 0) {
+            setTimeout(function() {
+              newEnemy.enemyAttack(userPlayer);
+            }, 1500);
+            console.log("Enemy Attack - Player:",userPlayer);
+            console.log("Enemy Attack - Enemey:",newEnemy);
+            if (userPlayer.life <= 0) {
+              alert("you died lol what a loser!!");
+              // location.reload();
+            }
           }
-        }
-        else {
-          alert("enemy died");
-          userPlayer.heal();
-          alert(userPlayer.life);
-        }
-      });
-
+          else {
+            alert("Wow. You killed someone's pet. Hope you feel good about yourself.");
+            setTimeout(function(){userPlayer.heal();}, 2000);
+            $("#attackCastle").hide();
+            castleCounter += 1;
+            $("#throneRoom").show();
+          }
+        });
+      }
     });
-    //escape to Map Button
-    $(".escape").click(function(event) {
-      event.preventDefault();
-      $("body").prepend('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[0] + '"></iframe>');
-      $(".locationHide").hide();
-      $("#locationContainer").hide();
-      $("#mapContainer").show();
-      $(".locTitle").hide();
-      $(".attack").hide();
-
-    });
-
     //throne room Button
     $("#throneRoom").click(function(event) {
       event.preventDefault();
       $("#castleContainer").hide();
       $("#throneContainer").show();
       $("#throneRoom").hide();
-      $("#attackThrone").show();
-      $("#attackCastle").hide();
       $(".escape").show();
       $(".locTitle").hide();
       $("#throneTitle").show();
@@ -505,7 +509,51 @@ $(function(){
         $(".Stunner").show();
       }
 
+      if (castleCounter === 6) {
+        $("#attackThrone").show();
+        //if-statement that generates a random enemy on first visit to location and prevents generating another random enemy on subsequent visits
+        if ($("#throneRoomEnemyAppear").children().length < 1) {
+          $("#throneRoomEnemyAppear").append('<img class="bossStyle" src="images/' + Boss.image + '" alt=""/>');
+        }
+
+        //Attack Sequence
+        $("#attackThrone").on("click", function() {
+          userPlayer.playerAttack(Boss);
+          console.log("Player Attack - Player:",userPlayer);
+          console.log("Player Attack - Enemey:",Boss);
+          if (Boss.life > 0) {
+            setTimeout(function() {
+              Boss.enemyAttack(userPlayer);
+            }, 1500);
+            console.log("Enemy Attack - Player:",userPlayer);
+            console.log("Enemy Attack - Enemey:",Boss);
+            if (userPlayer.life <= 0) {
+              alert("you died lol");
+              // location.reload();
+            }
+          }
+          else {
+            alert("Congrats! You killed the boss....you MURDERER!!!!");
+            setTimeout(function(){userPlayer.heal();}, 2000);
+            $("#attackThrone").hide();
+
+          }
+        });
+      }
+
     });
+    //escape to Map Button
+    $(".escape").click(function(event) {
+      event.preventDefault();
+      $("body").prepend('<iframe width="0px;" height="0px;" scrolling="no" frameborder="no" src="' + songs[0] + '"></iframe>');
+      $(".locationHide").hide();
+      $("#locationContainer").hide();
+      $("#mapContainer").show();
+      $(".locTitle").hide();
+      $(".attack").hide();
+
+    });
+
 
   });
 });
