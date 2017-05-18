@@ -276,7 +276,7 @@ body {
   padding-top: 15px;
   padding-left: 20px;
 }
- #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, #escape, #startContainer, #swampContainer, .attack, #throneContainer, #throneRoom, .Tinks, .Tex, .Stunner, .Ned, .Turkerus, .playerAppear, .locTitle {
+ #mapContainer, #boatContainer, #characterContainer, #villageContainer, #hauntedContainer, #towerContainer, #trailerContainer, #castleContainer, .escape, #startContainer, #swampContainer, .attack, #throneContainer, #throneRoom, .Tinks, .Tex, .Stunner, .Ned, .Turkerus, .playerAppear, .locTitle {
   display: none;
 }
 

@@ -488,6 +488,7 @@ $(function(){
       $("#throneContainer").show();
       $("#throneRoom").hide();
       $("#attackThrone").show();
+      $("#attackCastle").hide();
       $(".escape").show();
       $(".locTitle").hide();
       $("#throneTitle").show();
