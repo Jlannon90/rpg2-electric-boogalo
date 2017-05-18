@@ -63,7 +63,8 @@ Player.prototype.cast = function(life, magic) {
   //heal prototype that heals character
 Player.prototype.heal = function(life, item) {
 
-  this.life = this.life + formaldehyde.healthUp;
+  this.life += this.life
+  
 
   if (this.life > 100) {
     return this.life = 100;
@@ -162,6 +163,8 @@ $(function(){
         }
         else {
           alert("enemy died");
+          userPlayer.heal();
+          alert(userPlayer.life);
         }
       });
 
@@ -215,6 +218,8 @@ $(function(){
         }
         else {
           alert("enemy died");
+          userPlayer.heal();
+          alert(userPlayer.life);
         }
       });
 
@@ -268,6 +273,8 @@ $(function(){
         }
         else {
           alert("enemy died");
+          userPlayer.heal();
+          alert(userPlayer.life);
         }
       });
 
@@ -345,6 +352,8 @@ $(function(){
         }
         else {
           alert("enemy died");
+          userPlayer.heal();
+          alert(userPlayer.life);
         }
       });
 
@@ -399,6 +408,8 @@ $(function(){
         }
         else {
           alert("enemy died");
+          userPlayer.heal();
+          alert(userPlayer.life);
         }
       });
 
@@ -442,6 +453,8 @@ $(function(){
         }
         else {
           alert("enemy died");
+          userPlayer.heal();
+          alert(userPlayer.life);
         }
       });
 
