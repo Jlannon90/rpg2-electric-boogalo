@@ -62,18 +62,14 @@ Player.prototype.heal = function() {
     this.life = 100;
   }
 }
-
+//Array that allows access to Castle after defeating all locations
+var castleCounter = 0;
 // alert("fire5");
 var Boss = {
   name: "Steve-O",
   life: 100,
   physical: 8,
   magic: 10,
-  attack: function(life, power) {
-    //dice roll simulation
-    //when the method is called the paremeters take in the villians life and player's attack
-    this.life -= this.life - this.physical;
-  }
 };
 
  //------------------User Interface Logic------------------//
@@ -159,6 +155,8 @@ $(function(){
         else {
           alert("enemy died");
           setTimeout(function(){userPlayer.heal();}, 2000);
+          $("#attackHaunted").hide();
+          castleCounter += 1;
         }
       });
 
@@ -217,6 +215,8 @@ $(function(){
         else {
           alert("enemy died");
           setTimeout(function(){userPlayer.heal();}, 2000);
+          $("#attackVillage").hide();
+          castleCounter += 1;
         }
       });
 
@@ -274,7 +274,8 @@ $(function(){
         else {
           alert("enemy died");
           setTimeout(function(){userPlayer.heal();}, 2000);
-          alert(userPlayer.life);
+          $("#attackSwamp").hide();
+          castleCounter += 1;
         }
       });
 
@@ -357,7 +358,8 @@ $(function(){
         else {
           alert("enemy died");
           setTimeout(function(){userPlayer.heal();}, 2000);
-          alert(userPlayer.life);
+          $("#attackTower").hide();
+          castleCounter += 1;
         }
       });
 
@@ -416,7 +418,8 @@ $(function(){
         else {
           alert("enemy died");
           setTimeout(function(){userPlayer.heal();}, 2000);
-          alert(userPlayer.life);
+          $("#attackTrailer").hide();
+          castleCounter += 1;
         }
       });
 
@@ -427,11 +430,8 @@ $(function(){
       $("#mapContainer").hide();
       $("#locationContainer").show();
       $("#castleContainer").show();
-      $("#attackCastle").show();
       $(".escape").show();
-      $("#throneRoom").show();
       $("#castleTitle").show();
-
 
       if(userPlayer.name === "Tinks") {
         $(".Tinks").show();
@@ -446,29 +446,44 @@ $(function(){
         $(".Stunner").show();
       }
 
-      //Attack Sequence
-      $("#attackCastle").on("click", function() {
-        userPlayer.playerAttack(newEnemy);
-        console.log("Player Attack - Player:",userPlayer);
-        console.log("Player Attack - Enemey:",newEnemy);
-        if (newEnemy.life > 0) {
-          setTimeout(function() {
-            newEnemy.enemyAttack(userPlayer);
-          }, 1500);
-          console.log("Enemy Attack - Player:",userPlayer);
-          console.log("Enemy Attack - Enemey:",newEnemy);
-          if (userPlayer.life <= 0) {
-            alert("you died lol");
-            // location.reload();
-          }
+      if (castleCounter === 5) {
+        $("#attackCastle").show();
+        //if-statement that generates a random enemy on first visit to location and prevents generating another random enemy on subsequent visits
+        if ($("#castleEnemyAppear").children().length < 1) {
+          //store random number between 0 and the current length of the enemies array to select an enemy character
+          var position = Math.floor(Math.random()*enemies.length);
+          //create constructor for randomly selected enemy character
+          var newEnemy = new Enemy(position);
+          //remove randomly selected enemy and corresonding image from arrays to prevent being selected again
+          enemies.splice(position, 1);
+          enemyImages.splice(position, 1);
+          $("#castleEnemyAppear").append('<img class="enemyStyle" src="images/' + newEnemy.image + '" alt=""/>');
         }
-        else {
-          alert("enemy died");
-          setTimeout(function(){userPlayer.heal();}, 2000);
-          alert(userPlayer.life);
-        }
-      });
 
+        //Attack Sequence
+        $("#attackCastle").on("click", function() {
+          userPlayer.playerAttack(newEnemy);
+          console.log("Player Attack - Player:",userPlayer);
+          console.log("Player Attack - Enemey:",newEnemy);
+          if (newEnemy.life > 0) {
+            setTimeout(function() {
+              newEnemy.enemyAttack(userPlayer);
+            }, 1500);
+            console.log("Enemy Attack - Player:",userPlayer);
+            console.log("Enemy Attack - Enemey:",newEnemy);
+            if (userPlayer.life <= 0) {
+              alert("you died lol");
+              // location.reload();
+            }
+          }
+          else {
+            alert("enemy died");
+            setTimeout(function(){userPlayer.heal();}, 2000);
+            $("#attackCastle").hide();
+            $("#throneRoom").show();
+          }
+        });
+      }
     });
     //escape to Map Button
     $(".escape").click(function(event) {
