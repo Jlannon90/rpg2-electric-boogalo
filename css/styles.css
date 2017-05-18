@@ -482,6 +482,19 @@ body {
 #ufo {
   width: 200px;
 }
+.healthBarUser {
+  margin-top: 20px;
+  width: 100px;
+  height: 25px;
+  background-color: red;
+
+}
+.healthBarEnemy {
+  margin-top: 20px;
+  width: 100px;
+  height: 25px;
+  background-color: red;
+}
 
 
 /*@media screen and (max-width: 441px) {

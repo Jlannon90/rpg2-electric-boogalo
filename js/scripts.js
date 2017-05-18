@@ -141,13 +141,76 @@ $(function(){
         userPlayer.playerAttack(newEnemy);
         console.log("Player Attack - Player:",userPlayer);
         console.log("Player Attack - Enemey:",newEnemy);
+        if (newEnemy.life < 100 && newEnemy.life >= 90) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 90 && newEnemy.life >= 80) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 80 && newEnemy.life >= 70) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 70 && newEnemy.life >= 60) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 60 && newEnemy.life >= 50) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 50 && newEnemy.life >= 40) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 40 && newEnemy.life >= 30) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 30 && newEnemy.life >= 20) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 20 && newEnemy.life >= 10) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 10 && newEnemy.life <= 0) {
+          $(".healthBarEnemy").animate({width: "0px"}, "slow");
+        }
         if (newEnemy.life > 0) {
           setTimeout(function() {
             newEnemy.enemyAttack(userPlayer);
             console.log("Enemy Attack - Player:",userPlayer);
             console.log("Enemy Attack - Enemey:",newEnemy);
+
+            if (userPlayer.life < 100 && userPlayer.life >= 90) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 90 && userPlayer.life >= 80) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 80 && userPlayer.life >= 70) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 70 && userPlayer.life >= 60) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 60 && userPlayer.life >= 50) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 50 && userPlayer.life >= 40) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 40 && userPlayer.life >= 30) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 30 && userPlayer.life >= 20) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 20 && userPlayer.life >= 10) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 10 && userPlayer.life <= 0) {
+              $(".healthBarUser").animate({width: "0px"}, "slow");
+            }
+            
           }, 1500);
-          if (userPlayer.life <= 0) {
+          if
+           (userPlayer.life <= 0) {
             alert("you died lol");
             // location.reload();
           }
@@ -201,13 +264,76 @@ $(function(){
         userPlayer.playerAttack(newEnemy);
         console.log("Player Attack - Player:",userPlayer);
         console.log("Player Attack - Enemey:",newEnemy);
+        if (newEnemy.life < 100 && newEnemy.life >= 90) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 90 && newEnemy.life >= 80) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 80 && newEnemy.life >= 70) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 70 && newEnemy.life >= 60) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 60 && newEnemy.life >= 50) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 50 && newEnemy.life >= 40) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 40 && newEnemy.life >= 30) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 30 && newEnemy.life >= 20) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 20 && newEnemy.life >= 10) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 10 && newEnemy.life <= 0) {
+          $(".healthBarEnemy").animate({width: "0px"}, "slow");
+        }
         if (newEnemy.life > 0) {
           setTimeout(function() {
             newEnemy.enemyAttack(userPlayer);
             console.log("Enemy Attack - Player:",userPlayer);
             console.log("Enemy Attack - Enemey:",newEnemy);
+
+            if (userPlayer.life < 100 && userPlayer.life >= 90) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 90 && userPlayer.life >= 80) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 80 && userPlayer.life >= 70) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 70 && userPlayer.life >= 60) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 60 && userPlayer.life >= 50) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 50 && userPlayer.life >= 40) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 40 && userPlayer.life >= 30) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 30 && userPlayer.life >= 20) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 20 && userPlayer.life >= 10) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 10 && userPlayer.life <= 0) {
+              $(".healthBarUser").animate({width: "0px"}, "slow");
+            }
+            
           }, 1500);
-          if (userPlayer.life <= 0) {
+          if
+           (userPlayer.life <= 0) {
             alert("you died lol");
             // location.reload();
           }
@@ -260,13 +386,75 @@ $(function(){
         userPlayer.playerAttack(newEnemy);
         console.log("Player Attack - Player:",userPlayer);
         console.log("Player Attack - Enemey:",newEnemy);
+        if (newEnemy.life < 100 && newEnemy.life >= 90) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 90 && newEnemy.life >= 80) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 80 && newEnemy.life >= 70) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 70 && newEnemy.life >= 60) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 60 && newEnemy.life >= 50) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 50 && newEnemy.life >= 40) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 40 && newEnemy.life >= 30) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 30 && newEnemy.life >= 20) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 20 && newEnemy.life >= 10) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 10 && newEnemy.life <= 0) {
+          $(".healthBarEnemy").animate({width: "0px"}, "slow");
+        }
         if (newEnemy.life > 0) {
           setTimeout(function() {
             newEnemy.enemyAttack(userPlayer);
             console.log("Enemy Attack - Player:",userPlayer);
             console.log("Enemy Attack - Enemey:",newEnemy);
+
+            if (userPlayer.life < 100 && userPlayer.life >= 90) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 90 && userPlayer.life >= 80) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 80 && userPlayer.life >= 70) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 70 && userPlayer.life >= 60) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 60 && userPlayer.life >= 50) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 50 && userPlayer.life >= 40) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 40 && userPlayer.life >= 30) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 30 && userPlayer.life >= 20) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 20 && userPlayer.life >= 10) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 10 && userPlayer.life <= 0) {
+              $(".healthBarUser").animate({width: "0px"}, "slow");
+            }
+            
           }, 1500);
-          if (userPlayer.life <= 0) {
+        if (userPlayer.life <= 0) {
             alert("you died lol");
             // location.reload();
           }
@@ -344,12 +532,74 @@ $(function(){
         userPlayer.playerAttack(newEnemy);
         console.log("Player Attack - Player:",userPlayer);
         console.log("Player Attack - Enemey:",newEnemy);
+        if (newEnemy.life < 100 && newEnemy.life >= 90) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 90 && newEnemy.life >= 80) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 80 && newEnemy.life >= 70) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 70 && newEnemy.life >= 60) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 60 && newEnemy.life >= 50) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 50 && newEnemy.life >= 40) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 40 && newEnemy.life >= 30) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 30 && newEnemy.life >= 20) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 20 && newEnemy.life >= 10) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 10 && newEnemy.life <= 0) {
+          $(".healthBarEnemy").animate({width: "0px"}, "slow");
+        }
         if (newEnemy.life > 0) {
           setTimeout(function() {
             newEnemy.enemyAttack(userPlayer);
           }, 1500);
           console.log("Enemy Attack - Player:",userPlayer);
           console.log("Enemy Attack - Enemey:",newEnemy);
+
+          if (userPlayer.life < 100 && userPlayer.life >= 90) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 90 && userPlayer.life >= 80) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 80 && userPlayer.life >= 70) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 70 && userPlayer.life >= 60) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 60 && userPlayer.life >= 50) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 50 && userPlayer.life >= 40) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 40 && userPlayer.life >= 30) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 30 && userPlayer.life >= 20) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 20 && userPlayer.life >= 10) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 10 && userPlayer.life <= 0) {
+            $(".healthBarUser").animate({width: "0px"}, "slow");
+          }
+
           if (userPlayer.life <= 0) {
             alert("you died lol");
             // location.reload();
@@ -404,12 +654,74 @@ $(function(){
         userPlayer.playerAttack(newEnemy);
         console.log("Player Attack - Player:",userPlayer);
         console.log("Player Attack - Enemey:",newEnemy);
+        if (newEnemy.life < 100 && newEnemy.life >= 90) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 90 && newEnemy.life >= 80) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 80 && newEnemy.life >= 70) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 70 && newEnemy.life >= 60) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 60 && newEnemy.life >= 50) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 50 && newEnemy.life >= 40) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 40 && newEnemy.life >= 30) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 30 && newEnemy.life >= 20) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 20 && newEnemy.life >= 10) {
+          $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+        }
+        if (newEnemy.life < 10 && newEnemy.life <= 0) {
+          $(".healthBarEnemy").animate({width: "0px"}, "slow");
+        }
         if (newEnemy.life > 0) {
           setTimeout(function() {
             newEnemy.enemyAttack(userPlayer);
           }, 1500);
           console.log("Enemy Attack - Player:",userPlayer);
           console.log("Enemy Attack - Enemey:",newEnemy);
+
+          if (userPlayer.life < 100 && userPlayer.life >= 90) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 90 && userPlayer.life >= 80) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 80 && userPlayer.life >= 70) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 70 && userPlayer.life >= 60) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 60 && userPlayer.life >= 50) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 50 && userPlayer.life >= 40) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 40 && userPlayer.life >= 30) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 30 && userPlayer.life >= 20) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 20 && userPlayer.life >= 10) {
+            $(".healthBarUser").animate({width: "-=10px"}, "slow");
+          }
+          if (userPlayer.life < 10 && userPlayer.life <= 0) {
+            $(".healthBarUser").animate({width: "0px"}, "slow");
+          }
+
           if (userPlayer.life <= 0) {
             alert("you died lol");
             // location.reload();
@@ -465,12 +777,74 @@ $(function(){
           userPlayer.playerAttack(newEnemy);
           console.log("Player Attack - Player:",userPlayer);
           console.log("Player Attack - Enemey:",newEnemy);
+          if (newEnemy.life < 100 && newEnemy.life >= 90) {
+            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          }
+          if (newEnemy.life < 90 && newEnemy.life >= 80) {
+            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          }
+          if (newEnemy.life < 80 && newEnemy.life >= 70) {
+            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          }
+          if (newEnemy.life < 70 && newEnemy.life >= 60) {
+            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          }
+          if (newEnemy.life < 60 && newEnemy.life >= 50) {
+            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          }
+          if (newEnemy.life < 50 && newEnemy.life >= 40) {
+            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          }
+          if (newEnemy.life < 40 && newEnemy.life >= 30) {
+            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          }
+          if (newEnemy.life < 30 && newEnemy.life >= 20) {
+            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          }
+          if (newEnemy.life < 20 && newEnemy.life >= 10) {
+            $(".healthBarEnemy").animate({width: "-=10px"}, "slow");
+          }
+          if (newEnemy.life < 10 && newEnemy.life <= 0) {
+            $(".healthBarEnemy").animate({width: "0px"}, "slow");
+          }
           if (newEnemy.life > 0) {
             setTimeout(function() {
               newEnemy.enemyAttack(userPlayer);
             }, 1500);
             console.log("Enemy Attack - Player:",userPlayer);
             console.log("Enemy Attack - Enemey:",newEnemy);
+
+            if (userPlayer.life < 100 && userPlayer.life >= 90) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 90 && userPlayer.life >= 80) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 80 && userPlayer.life >= 70) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 70 && userPlayer.life >= 60) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 60 && userPlayer.life >= 50) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 50 && userPlayer.life >= 40) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 40 && userPlayer.life >= 30) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 30 && userPlayer.life >= 20) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 20 && userPlayer.life >= 10) {
+              $(".healthBarUser").animate({width: "-=10px"}, "slow");
+            }
+            if (userPlayer.life < 10 && userPlayer.life <= 0) {
+              $(".healthBarUser").animate({width: "0px"}, "slow");
+            }
+
             if (userPlayer.life <= 0) {
               alert("you died lol");
               // location.reload();
